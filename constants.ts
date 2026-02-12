@@ -9,7 +9,7 @@ import {
   GraduationCap,
   Mail,
   Camera,
-  FileText
+  Instagram
 } from 'lucide-react';
 import { SocialLink, NavItem, Project, ContentItem, PhotoItem } from './types';
 
@@ -31,10 +31,10 @@ export const PROFILE = {
 export const RESUME_URL = "/data/resume.pdf"; 
 
 export const SOCIAL_LINKS: SocialLink[] = [
-  { name: 'Email', icon: Mail, url: 'mailto:zengshenyan0308@163.com', bgColor: 'bg-red-500', textColor: 'text-white' },
-  { name: 'GitHub', icon: Github, url: 'https://github.com/your-github-id', bgColor: 'bg-[#333]', textColor: 'text-white' },
-  { name: 'Scholar', icon: GraduationCap, url: '#', bgColor: 'bg-[#4285F4]', textColor: 'text-white' },
-  { name: 'LinkedIn', icon: Linkedin, url: '#', bgColor: 'bg-[#0077b5]', textColor: 'text-white' }
+  { name: 'Instagram', icon: Instagram, url: 'https://www.instagram.com/sam_zengsy/', bgColor: 'bg-gradient-to-br from-pink-500 via-purple-500 to-yellow-500', textColor: 'text-white' },
+  { name: 'GitHub', icon: Github, url: 'https://github.com/Samzengsy', bgColor: 'bg-[#333]', textColor: 'text-white' },
+  { name: 'UCSB Math', icon: GraduationCap, url: 'https://www.math.ucsb.edu/', bgColor: 'bg-[#4285F4]', textColor: 'text-white' },
+  { name: 'LinkedIn', icon: Linkedin, url: 'https://www.linkedin.com/in/shenyanzeng-1949442b7', bgColor: 'bg-[#0077b5]', textColor: 'text-white' }
 ];
 
 export const NAV_ITEMS: NavItem[] = [
