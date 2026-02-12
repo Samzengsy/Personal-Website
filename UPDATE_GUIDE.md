@@ -3,26 +3,20 @@
 本文件用于记录这个网站项目的日常更新与发布流程，方便每次修改后快速同步到 GitHub 并触发 Vercel 自动部署。
 
 ## 日常更新流程（推荐）
-
+```bash
 1. 查看改动
-   ```bash
-   git status
-   ```
+git status
 
 2. 添加改动
-   ```bash
-   git add .
-   ```
+git add .
 
 3. 提交改动
-   ```bash
-   git commit -m "update content"
-   ```
+git commit -m "update content"
 
 4. 推送到 GitHub（触发 Vercel 自动部署）
-   ```bash
-   git push
-   ```
+git push
+
+```
 
 ## 只改了已跟踪文件时的快捷方式
 
