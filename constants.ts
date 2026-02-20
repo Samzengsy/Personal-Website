@@ -17,12 +17,8 @@ export const PROFILE = {
   title: "Applied Math @ UCSB",
   avatar: "/data/selfie.jpg", 
   heroImage: "/data/selfie.jpg", 
-  bioPoints: [
-    "Research Assistant @ State Key Lab of CAD & CG, Zhejiang University (Advisor: Prof. Chunhua Shen).",
-    "B.S. in Applied Mathematics @ UC Santa Barbara (Sep 2021–Mar 2025).",
-    "Intern Experience: AI Algorithm Engineer @ Wind Information Co., Ltd.",
-    "Tech Stack: Python, PyTorch, vLLM, HuggingFace, Multimodal LLMs, Computer Vision."
-  ]
+  aboutText:
+    "👋 Hi, I'm Shenyan Zeng. I hold a B.S. in Applied Mathematics from UC Santa Barbara 🎓 and I am currently in a deliberate gap year, working as a Research Assistant at Zhejiang University's State Key Lab of CAD & CG 🔬. My primary research interests lie in Artificial Intelligence, particularly in multimodal systems, long-video understanding, and Generative AI 🤖. Beyond the screen, I’m originally from Nanjing and find joy in the finer details of life. You'll often find me exploring nature with my camera 📸, experimenting with cooking 🍳, appreciating perfumes 🌲, or just spending quality time with dogs 🐶."
 };
 
 export const RESUME_URL = "/data/resume.pdf"; 
@@ -59,9 +55,21 @@ export const PROJECT_GROUPS: ProjectGroup[] = [
     id: 'wind',
     label: 'Wind',
     items: [
-      { label: 'Dataset Prep Tools', url: 'https://github.com/Samzengsy/dataset-prep-tools' },
-      { label: 'Vision Eval Tools', url: 'https://github.com/Samzengsy/vision-eval-tools' },
-      { label: 'Error Analysis UI', url: 'https://github.com/Samzengsy/error-analysis-ui' }
+      { 
+        label: 'Dataset Prep Tools', 
+        url: 'https://github.com/Samzengsy/dataset-prep-tools',
+        thumbnail: 'https://opengraph.githubassets.com/1/Samzengsy/dataset-prep-tools'
+      },
+      { 
+        label: 'Vision Eval Tools', 
+        url: 'https://github.com/Samzengsy/vision-eval-tools',
+        thumbnail: 'https://opengraph.githubassets.com/1/Samzengsy/vision-eval-tools'
+      },
+      { 
+        label: 'Error Analysis UI', 
+        url: 'https://github.com/Samzengsy/error-analysis-ui',
+        thumbnail: 'https://opengraph.githubassets.com/1/Samzengsy/error-analysis-ui'
+      }
     ]
   },
   {

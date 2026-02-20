@@ -11,14 +11,9 @@ export const Hero: React.FC = () => {
           {/* Text Content */}
           <div className="flex-1 space-y-4">
             <h2 className="text-xl font-semibold text-gray-800 mb-4 hidden md:block">About Me</h2>
-            <ul className="space-y-3">
-              {PROFILE.bioPoints.map((point, index) => (
-                <li key={index} className="flex items-start gap-2 text-gray-600 leading-relaxed">
-                  <span className="mt-2 w-1.5 h-1.5 rounded-full bg-gray-300 flex-shrink-0" />
-                  <span>{point}</span>
-                </li>
-              ))}
-            </ul>
+            <p className="text-gray-600 leading-relaxed text-base md:text-lg">
+              {PROFILE.aboutText}
+            </p>
             <div className="pt-2">
               <a 
                 href={RESUME_URL} 

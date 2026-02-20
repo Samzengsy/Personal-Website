@@ -24,7 +24,7 @@ export const Experience: React.FC = () => {
             </div>
             <div className="flex-1">
               <h3 className="text-lg font-semibold text-gray-800">
-                Nanjing Xianlin Foreign Language School × Wasatch Academy International Program
+                Nanjing Xianlin Foreign Language School × Wasatch Academy Program
               </h3>
               <a
                 href="https://www.nflsxl.com/51/list.htm"
