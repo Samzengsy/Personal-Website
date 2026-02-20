@@ -1,12 +1,13 @@
 import React from 'react';
+import { ASSET_BASE } from '../constants';
 
 export const Lifestyle: React.FC = () => {
   const travel = [];
   const photography = [
-    { id: '1', src: '/data/joshua-tree.jpg', alt: 'Joshua Tree' },
-    { id: '2', src: '/data/yosemite.jpg', alt: 'Yosemite' },
-    { id: '3', src: '/data/meteor.jpg', alt: 'Meteor' },
-    { id: '4', src: '/data/los-angeles.jpg', alt: 'Los Angeles' }
+    { id: '1', src: `${ASSET_BASE}data/joshua-tree.jpg`, alt: 'Joshua Tree' },
+    { id: '2', src: `${ASSET_BASE}data/yosemite.jpg`, alt: 'Yosemite' },
+    { id: '3', src: `${ASSET_BASE}data/meteor.jpg`, alt: 'Meteor' },
+    { id: '4', src: `${ASSET_BASE}data/los-angeles.jpg`, alt: 'Los Angeles' }
   ];
   const sports = [];
   const music = [];

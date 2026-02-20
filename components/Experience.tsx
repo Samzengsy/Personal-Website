@@ -1,4 +1,5 @@
 import React from 'react';
+import { ASSET_BASE } from '../constants';
 
 const Logo: React.FC<{ src: string; alt: string }> = ({ src, alt }) => (
   <div className="h-16 w-16 md:h-20 md:w-20 rounded-xl border border-gray-100 bg-white flex items-center justify-center p-2 shadow-sm">
@@ -19,8 +20,8 @@ export const Experience: React.FC = () => {
         <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
           <div className="flex flex-col md:flex-row gap-6">
             <div className="flex flex-wrap gap-3">
-              <Logo src="/data/NFLSXL.png" alt="Nanjing Foreign Language School Xianlin Campus crest" />
-              <Logo src="/data/Wasatch-Academy.webp" alt="Wasatch Academy crest" />
+              <Logo src={`${ASSET_BASE}data/NFLSXL.png`} alt="Nanjing Foreign Language School Xianlin Campus crest" />
+              <Logo src={`${ASSET_BASE}data/Wasatch-Academy.webp`} alt="Wasatch Academy crest" />
             </div>
             <div className="flex-1">
               <h3 className="text-lg font-semibold text-gray-800">
@@ -44,7 +45,7 @@ export const Experience: React.FC = () => {
         <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
           <div className="flex flex-col md:flex-row gap-6">
             <div className="flex flex-wrap gap-3">
-              <Logo src="/data/UCSB.png" alt="UCSB crest" />
+              <Logo src={`${ASSET_BASE}data/UCSB.png`} alt="UCSB crest" />
             </div>
             <div className="flex-1">
               <h3 className="text-lg font-semibold text-gray-800">UCSB</h3>
@@ -66,7 +67,7 @@ export const Experience: React.FC = () => {
         <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
           <div className="flex flex-col md:flex-row gap-6">
             <div className="flex flex-wrap gap-3">
-              <Logo src="/data/wind.webp" alt="Wind logo" />
+              <Logo src={`${ASSET_BASE}data/wind.webp`} alt="Wind logo" />
             </div>
             <div className="flex-1">
               <h3 className="text-lg font-semibold text-gray-800">Wind Information</h3>
@@ -214,7 +215,7 @@ export const Experience: React.FC = () => {
         <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
           <div className="flex flex-col md:flex-row gap-6">
             <div className="flex flex-wrap gap-3">
-              <Logo src="/data/ZJU.jpg" alt="Zhejiang University logo" />
+              <Logo src={`${ASSET_BASE}data/ZJU.jpg`} alt="Zhejiang University logo" />
             </div>
             <div className="flex-1">
               <h3 className="text-lg font-semibold text-gray-800">Zhejiang University (ZJU)</h3>
