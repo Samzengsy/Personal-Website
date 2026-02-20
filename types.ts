@@ -14,8 +14,13 @@ export interface NavItem {
   id: string;
 }
 
+export interface ProjectItem {
+  label: string;
+  url?: string;
+}
+
 export interface ProjectGroup {
   id: string;
   label: string;
-  items: string[];
+  items: ProjectItem[];
 }

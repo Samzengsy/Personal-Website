@@ -14,6 +14,8 @@ git add .
 git commit -m "update content"
 
 4. 推送到 GitHub（触发 Vercel 自动部署）
+git config --global http.proxy http://127.0.0.1:7890    根据网络代理的端口修改 
+git config --global https.proxy http://127.0.0.1:7890
 git push
 
 ```

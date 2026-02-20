@@ -10,7 +10,7 @@ export const Hero: React.FC = () => {
           
           {/* Text Content */}
           <div className="flex-1 space-y-4">
-            <h2 className="text-xl font-semibold text-gray-800 mb-4 hidden md:block">关于我</h2>
+            <h2 className="text-xl font-semibold text-gray-800 mb-4 hidden md:block">About Me</h2>
             <ul className="space-y-3">
               {PROFILE.bioPoints.map((point, index) => (
                 <li key={index} className="flex items-start gap-2 text-gray-600 leading-relaxed">
@@ -26,7 +26,7 @@ export const Hero: React.FC = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1 text-blue-600 font-semibold hover:text-blue-800 transition-colors hover:underline underline-offset-4"
               >
-                This is my CV
+                View My CV
                 <ExternalLink size={16} />
               </a>
             </div>

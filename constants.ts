@@ -35,27 +35,36 @@ export const SOCIAL_LINKS: SocialLink[] = [
 ];
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: 'About me', icon: Home, id: 'home' },
-  { label: '求学经历', icon: GraduationCap, id: 'education' },
-  { label: '项目回顾', icon: Box, id: 'projects' },
-  { label: '生活掠影', icon: Camera, id: 'life' },
-  { label: 'contact me', icon: MessageSquare, id: 'contact' },
+  { label: 'About Me', icon: Home, id: 'home' },
+  { label: 'Experience', icon: GraduationCap, id: 'experience' },
+  { label: 'Project Review', icon: Box, id: 'projects' },
+  { label: 'Lifestyle', icon: Camera, id: 'life' },
+  { label: 'Contact Me', icon: MessageSquare, id: 'contact' },
 ];
 
 export const PROJECT_GROUPS: ProjectGroup[] = [
   {
     id: 'undergrad',
-    label: '本科',
-    items: ['本科1', '本科2']
+    label: 'Undergrad',
+    items: [
+      { label: 'Undergrad 1' },
+      { label: 'Undergrad 2', url: '/data/Final%20Report_%20Housing%20Crisis%20Awareness%20Campaign.pdf' }
+    ]
   },
   {
     id: 'wind',
-    label: '万得',
-    items: ['万得1', '万得2']
+    label: 'Wind',
+    items: [
+      { label: 'Wind 1' },
+      { label: 'Wind 2' }
+    ]
   },
   {
     id: 'zju',
     label: 'ZJU',
-    items: ['ZJU1', 'ZJU2']
+    items: [
+      { label: 'ZJU 1' },
+      { label: 'ZJU 2' }
+    ]
   }
 ];
