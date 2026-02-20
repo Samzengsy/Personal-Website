@@ -78,36 +78,6 @@ export const Experience: React.FC = () => {
               >
                 Official Site
               </a>
-              <div className="mt-4">
-                <h4 className="text-sm font-semibold text-gray-700 mb-2">Code Projects</h4>
-                <div className="flex flex-wrap gap-3 text-sm">
-                  <a
-                    href="https://github.com/Samzengsy/dataset-prep-tools"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-700 hover:underline underline-offset-4"
-                  >
-                    Dataset Prep Tools
-                  </a>
-                  <a
-                    href="https://github.com/Samzengsy/vision-eval-tools"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-700 hover:underline underline-offset-4"
-                  >
-                    Vision Eval Tools
-                  </a>
-                  <a
-                    href="https://github.com/Samzengsy/error-analysis-ui"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-700 hover:underline underline-offset-4"
-                  >
-                    Error Analysis UI
-                  </a>
-                </div>
-              </div>
-
               <div className="mt-6">
                 <p className="text-sm text-gray-500 mb-4">
                   Visualization highlights from data evaluation and pipeline work:
