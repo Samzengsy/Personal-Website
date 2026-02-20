@@ -14,7 +14,7 @@ import { SocialLink, NavItem, ProjectGroup } from './types';
 // Note: Ensure the 'data' folder is at the project root and served by the web server
 export const PROFILE = {
   name: "Shenyan Zeng",
-  title: "Applied Math @ UCSB | AI Researcher",
+  title: "Applied Math @ UCSB",
   avatar: "/data/selfie.jpg", 
   heroImage: "/data/selfie.jpg", 
   bioPoints: [
@@ -59,8 +59,9 @@ export const PROJECT_GROUPS: ProjectGroup[] = [
     id: 'wind',
     label: 'Wind',
     items: [
-      { label: 'Wind 1' },
-      { label: 'Wind 2' }
+      { label: 'Dataset Prep Tools', url: 'https://github.com/Samzengsy/dataset-prep-tools' },
+      { label: 'Vision Eval Tools', url: 'https://github.com/Samzengsy/vision-eval-tools' },
+      { label: 'Error Analysis UI', url: 'https://github.com/Samzengsy/error-analysis-ui' }
     ]
   },
   {
