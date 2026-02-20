@@ -8,14 +8,32 @@ export const Contact: React.FC = () => {
           <p className="text-gray-600 mb-6">
             Looking for opportunities in AI, Computer Vision, and Multimodal Learning?
             <br />
-            Feel free to reach out via email.
+            Feel free to reach out.
           </p>
-          <a 
-            href="mailto:zengshenyan0308@163.com"
-            className="inline-block bg-gray-900 text-white px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors"
-          >
-            Send Email
-          </a>
+          <div className="max-w-md mx-auto text-left space-y-3">
+            <div className="flex items-center justify-between gap-4">
+              <span className="text-gray-500">Email</span>
+              <a
+                href="mailto:zengshenyan0308@163.com"
+                className="text-gray-900 font-semibold hover:underline underline-offset-4"
+              >
+                zengshenyan0308@163.com
+              </a>
+            </div>
+            <div className="flex items-center justify-between gap-4">
+              <span className="text-gray-500">WeChat</span>
+              <span className="text-gray-900 font-semibold">Zengsy-Sam</span>
+            </div>
+            <div className="flex items-center justify-between gap-4">
+              <span className="text-gray-500">Phone</span>
+              <a
+                href="tel:+8615951991599"
+                className="text-gray-900 font-semibold hover:underline underline-offset-4"
+              >
+                +86 15951991599
+              </a>
+            </div>
+          </div>
        </div>
     </section>
   );

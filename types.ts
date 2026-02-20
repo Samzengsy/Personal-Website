@@ -17,6 +17,7 @@ export interface NavItem {
 export interface ProjectItem {
   label: string;
   url?: string;
+  thumbnail?: string;
 }
 
 export interface ProjectGroup {

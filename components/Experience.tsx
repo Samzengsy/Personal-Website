@@ -56,29 +56,44 @@ export const Experience: React.FC = () => {
         </div>
 
         <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-          <h3 className="text-lg font-semibold text-gray-800 mb-4">Gap</h3>
-          <div className="space-y-6">
-            <div className="flex flex-col md:flex-row gap-6">
-              <div className="flex flex-wrap gap-3">
-                <Logo src="/data/wind.webp" alt="Wind logo" />
-              </div>
-              <div className="flex-1">
-                <h4 className="text-base font-semibold text-gray-800">Wind Information</h4>
-                <div className="mt-3">
-                  <ContentPlaceholder />
-                </div>
+          <div className="flex flex-col md:flex-row gap-6">
+            <div className="flex flex-wrap gap-3">
+              <Logo src="/data/wind.webp" alt="Wind logo" />
+            </div>
+            <div className="flex-1">
+              <h3 className="text-lg font-semibold text-gray-800">Wind Information</h3>
+              <a
+                href="https://www.wind.com.cn/portal/en/AboutUs/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-blue-600 font-semibold hover:text-blue-800 transition-colors hover:underline underline-offset-4 mt-2"
+              >
+                Official Site
+              </a>
+              <div className="mt-4">
+                <ContentPlaceholder />
               </div>
             </div>
+          </div>
+        </div>
 
-            <div className="flex flex-col md:flex-row gap-6">
-              <div className="flex flex-wrap gap-3">
-                <Logo src="/data/ZJU.jpg" alt="Zhejiang University logo" />
-              </div>
-              <div className="flex-1">
-                <h4 className="text-base font-semibold text-gray-800">Zhejiang University (ZJU)</h4>
-                <div className="mt-3">
-                  <ContentPlaceholder />
-                </div>
+        <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+          <div className="flex flex-col md:flex-row gap-6">
+            <div className="flex flex-wrap gap-3">
+              <Logo src="/data/ZJU.jpg" alt="Zhejiang University logo" />
+            </div>
+            <div className="flex-1">
+              <h3 className="text-lg font-semibold text-gray-800">Zhejiang University (ZJU)</h3>
+              <a
+                href="http://www.cad.zju.edu.cn/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-blue-600 font-semibold hover:text-blue-800 transition-colors hover:underline underline-offset-4 mt-2"
+              >
+                State Key Lab of CAD & CG
+              </a>
+              <div className="mt-4">
+                <ContentPlaceholder />
               </div>
             </div>
           </div>

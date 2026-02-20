@@ -48,7 +48,11 @@ export const PROJECT_GROUPS: ProjectGroup[] = [
     label: 'Undergrad',
     items: [
       { label: 'Undergrad 1' },
-      { label: 'Undergrad 2', url: '/data/Final%20Report_%20Housing%20Crisis%20Awareness%20Campaign.pdf' }
+      { 
+        label: 'HOUSING CRISIS AWARENESS CAMPAIGN', 
+        url: '/data/Final%20Report_%20Housing%20Crisis%20Awareness%20Campaign.pdf',
+        thumbnail: '/data/housing-crisis-preview.png'
+      }
     ]
   },
   {
