@@ -31,8 +31,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeSection, onNavigate }) =
           </div>
         </div>
 
-        {/* Social Icons (Hidden on mobile to save space, or show distinct row) */}
-        <div className="hidden lg:flex gap-3 mb-8 w-full">
+        {/* Social Icons */}
+        <div className="flex gap-3 lg:mb-8 w-full flex-wrap">
           {SOCIAL_LINKS.map((link) => (
             <a 
               key={link.name} 

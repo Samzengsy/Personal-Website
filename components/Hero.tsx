@@ -11,7 +11,7 @@ export const Hero: React.FC = () => {
           {/* Text Content */}
           <div className="flex-1 space-y-4">
             <h2 className="text-xl font-semibold text-gray-800 mb-4 hidden md:block">About Me</h2>
-            <p className="text-gray-600 leading-relaxed text-base md:text-lg">
+            <p className="text-gray-600 leading-relaxed text-sm md:text-base">
               {PROFILE.aboutText}
             </p>
             <div className="pt-2">
