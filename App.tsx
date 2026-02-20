@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Sidebar } from './components/Sidebar';
 import { Hero } from './components/Hero';
+import { Education } from './components/Education';
 import { ProjectList } from './components/ProjectList';
-import { ContentList } from './components/ContentList';
 import { Lifestyle } from './components/Lifestyle';
 import { Contact } from './components/Contact';
 
@@ -30,7 +30,7 @@ const App: React.FC = () => {
       { threshold: 0.3, rootMargin: "-20% 0px -50% 0px" }
     );
 
-    const sections = ['home', 'projects', 'videos', 'life', 'contact'];
+    const sections = ['home', 'education', 'projects', 'life', 'contact'];
     sections.forEach((id) => {
       const element = document.getElementById(id);
       if (element) observer.observe(element);
@@ -48,8 +48,8 @@ const App: React.FC = () => {
         {/* Spacer for mobile fixed sidebar/header if needed */}
         <div className="lg:mt-0 mt-4">
           <Hero />
+          <Education />
           <ProjectList />
-          <ContentList />
           <Lifestyle />
           <Contact />
         </div>

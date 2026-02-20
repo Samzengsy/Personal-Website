@@ -1,26 +1,23 @@
 import React from 'react';
-import { PROJECTS } from '../constants';
-import { Star } from 'lucide-react';
+import { PROJECT_GROUPS } from '../constants';
 
 export const ProjectList: React.FC = () => {
   return (
     <section id="projects" className="mb-12 scroll-mt-24">
-      <h2 className="text-2xl font-bold text-gray-900 mb-6">AI作品集</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {PROJECTS.map((project) => (
-          <div 
-            key={project.id} 
-            className="group bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-all cursor-pointer flex flex-col items-center justify-between min-h-[160px]"
-          >
-            <div className="text-4xl mb-4 transform group-hover:scale-110 transition-transform">
-              {project.icon}
-            </div>
-            <div className="w-full flex items-center justify-between mt-auto">
-              <h3 className="font-semibold text-gray-800 text-sm md:text-base">{project.title}</h3>
-              <div className="flex items-center gap-1 text-gray-400 text-xs font-medium">
-                <Star size={12} fill="currentColor" />
-                {project.stats}
-              </div>
+      <h2 className="text-2xl font-bold text-gray-900 mb-6">项目回顾</h2>
+      <div className="space-y-6">
+        {PROJECT_GROUPS.map((group) => (
+          <div key={group.id} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+            <h3 className="text-lg font-semibold text-gray-800 mb-4">{group.label}</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {group.items.map((item) => (
+                <div
+                  key={item}
+                  className="rounded-xl border border-dashed border-gray-200 bg-gray-50 p-4 min-h-[96px] flex items-center justify-center text-gray-400 text-sm"
+                >
+                  {item}
+                </div>
+              ))}
             </div>
           </div>
         ))}
