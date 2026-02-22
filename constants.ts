@@ -14,7 +14,8 @@ import {
 } from 'lucide-react';
 import { SocialLink, NavItem, ProjectGroup } from './types';
 
-export const ASSET_BASE = import.meta.env.BASE_URL;
+const RAW_BASE_URL = import.meta.env.BASE_URL || '/';
+export const ASSET_BASE = RAW_BASE_URL.endsWith('/') ? RAW_BASE_URL : `${RAW_BASE_URL}/`;
 
 // Using string paths for images in the public/root data directory
 // Note: Ensure the 'data' folder is at the project root and served by the web server
@@ -60,9 +61,9 @@ export const NAV_ITEMS: NavItem[] = [
 export const PUBLICATIONS = [
   {
     id: 'cvpr-accepted',
-    title: 'CVPR Paper',
-    status: 'Accepted (to appear)',
-    venue: 'CVPR',
+    title: 'Eliciting Complex Spatial Reasoning in MLLMs through Wide-Baseline Matching',
+    status: 'Accepted to CVPR 2026 (to appear)',
+    venue: 'CVPR 2026',
     links: {
       openReview: undefined,
       preprint: undefined,
@@ -125,32 +126,32 @@ export const LIFESTYLE_PAGES = {
         src: `${ASSET_BASE}data/joshua-tree.jpg`,
         alt: 'Joshua Tree',
         location: 'Joshua Tree',
-        year: 'Not specified',
-        note: 'From existing photography set.'
+        year: 'Undated',
+        note: 'From existing photography archive.'
       },
       {
         id: '2',
         src: `${ASSET_BASE}data/yosemite.jpg`,
         alt: 'Yosemite',
         location: 'Yosemite',
-        year: 'Not specified',
-        note: 'From existing photography set.'
+        year: 'Undated',
+        note: 'From existing photography archive.'
       },
       {
         id: '3',
         src: `${ASSET_BASE}data/meteor.jpg`,
         alt: 'Meteor',
         location: 'Meteor',
-        year: 'Not specified',
-        note: 'From existing photography set.'
+        year: 'Undated',
+        note: 'From existing photography archive.'
       },
       {
         id: '4',
         src: `${ASSET_BASE}data/los-angeles.jpg`,
         alt: 'Los Angeles',
         location: 'Los Angeles',
-        year: 'Not specified',
-        note: 'From existing photography set.'
+        year: 'Undated',
+        note: 'From existing photography archive.'
       }
     ]
   },

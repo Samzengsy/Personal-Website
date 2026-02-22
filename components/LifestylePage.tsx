@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import { LIFESTYLE_PAGES } from '../constants';
 
@@ -9,6 +9,7 @@ interface LifestylePageProps {
 
 export const LifestylePage: React.FC<LifestylePageProps> = ({ slug, onBack }) => {
   const page = (LIFESTYLE_PAGES as Record<string, { title: string; subtitle?: string; items: { id: string; src?: string; alt?: string; location?: string; year?: string; note?: string }[] }>)[slug];
+  const [brokenImages, setBrokenImages] = useState<Record<string, boolean>>({});
 
   const renderBackButton = () => (
     <a
@@ -53,18 +54,23 @@ export const LifestylePage: React.FC<LifestylePageProps> = ({ slug, onBack }) =>
               {page.items.map((item) => (
                 <div key={item.id} className="rounded-xl overflow-hidden border border-slate-200 bg-white shadow-sm">
                   <div className="aspect-square">
-                    {item.src ? (
-                      <img src={item.src} alt={item.alt || page.title} className="w-full h-full object-cover" />
+                    {item.src && !brokenImages[item.id] ? (
+                      <img
+                        src={item.src}
+                        alt={item.alt || page.title}
+                        className="w-full h-full object-cover"
+                        onError={() => setBrokenImages((prev) => ({ ...prev, [item.id]: true }))}
+                      />
                     ) : (
-                      <div className="w-full h-full flex items-center justify-center text-xs text-slate-400">
-                        No preview
+                      <div className="w-full h-full flex items-center justify-center text-xs text-slate-400 bg-slate-50">
+                        Image unavailable
                       </div>
                     )}
                   </div>
                   <div className="p-3 text-xs text-slate-600 space-y-1">
-                    <div><span className="font-semibold text-slate-800">Location:</span> {item.location || 'Not specified'}</div>
-                    <div><span className="font-semibold text-slate-800">Year:</span> {item.year || 'Not specified'}</div>
-                    <div><span className="font-semibold text-slate-800">Note:</span> {item.note || 'Not specified'}</div>
+                    <div><span className="font-semibold text-slate-800">Location:</span> {item.location || 'Archive'}</div>
+                    <div><span className="font-semibold text-slate-800">Year:</span> {item.year || 'Undated'}</div>
+                    <div><span className="font-semibold text-slate-800">Note:</span> {item.note || 'Stored in personal archive.'}</div>
                   </div>
                 </div>
               ))}

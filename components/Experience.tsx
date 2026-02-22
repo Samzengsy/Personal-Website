@@ -1,5 +1,6 @@
 import React from 'react';
-import { ASSET_BASE, PROJECT_GROUPS } from '../constants';
+import { GraduationCap } from 'lucide-react';
+import { ASSET_BASE } from '../constants';
 
 const Logo: React.FC<{ src: string; alt: string; href: string }> = ({ src, alt, href }) => (
   <a
@@ -12,26 +13,14 @@ const Logo: React.FC<{ src: string; alt: string; href: string }> = ({ src, alt, 
   </a>
 );
 
-const slugify = (label: string) =>
-  label
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/(^-|-$)/g, '');
+const IconBadge: React.FC<{ label: string }> = ({ label }) => (
+  <div className="h-14 w-14 md:h-16 md:w-16 rounded-xl border border-slate-200 bg-slate-50 flex items-center justify-center text-slate-500">
+    <GraduationCap size={20} aria-hidden="true" />
+    <span className="sr-only">{label}</span>
+  </div>
+);
 
 export const Experience: React.FC = () => {
-  const undergradGroup = PROJECT_GROUPS.find((group) => group.id === 'undergrad');
-  const zjuGroup = PROJECT_GROUPS.find((group) => group.id === 'zju');
-  const windGroup = PROJECT_GROUPS.find((group) => group.id === 'wind');
-
-  const researchProjects = [...(undergradGroup?.items ?? []), ...(zjuGroup?.items ?? [])];
-
-  const projectDescriptions: Record<string, string> = {
-    'Undergrad 1': 'Undergraduate project placeholder; scope and results to be added.',
-    'HOUSING CRISIS AWARENESS CAMPAIGN': 'Policy communication report with visual narrative and community impact focus.',
-    'ZJU 1': 'Lab project placeholder; methods and findings to be summarized.',
-    'ZJU 2': 'Research prototype placeholder; data and evaluation details forthcoming.'
-  };
-
   return (
     <>
       <section id="academic" className="mb-10 scroll-mt-24 fade-up fade-up-delay-3">
@@ -79,26 +68,12 @@ export const Experience: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-[auto,1fr,auto] gap-4 items-start">
-              <div className="h-14 w-14 md:h-16 md:w-16 rounded-xl border border-dashed border-slate-200 bg-slate-50" />
+              <IconBadge label="Gap Period" />
               <div>
-                <div className="text-sm font-semibold text-slate-900">Gap Year / Research Preparation Phase</div>
+                <div className="text-sm font-semibold text-slate-900">Gap Period</div>
+                <div className="text-xs text-slate-600">Independent study and research preparation</div>
               </div>
-              <div className="text-sm text-slate-500 md:text-right">Mar 2025 – Aug 2025</div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-[auto,1fr,auto] gap-4 items-start">
-              <div className="flex flex-wrap gap-2">
-                <Logo
-                  src={`${ASSET_BASE}data/ZJU.jpg`}
-                  alt="Zhejiang University logo"
-                  href="http://www.cad.zju.edu.cn/"
-                />
-              </div>
-              <div>
-                <div className="text-sm font-semibold text-slate-900">Zhejiang University</div>
-                <div className="text-xs text-slate-600">Research Assistant, State Key Lab of CAD & CG</div>
-              </div>
-              <div className="text-sm text-slate-500 md:text-right">Aug 2025 – Present</div>
+              <div className="text-sm text-slate-500 md:text-right">Mar 2025 – Present</div>
             </div>
           </div>
         </div>
@@ -273,26 +248,6 @@ export const Experience: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
-                <div>
-                  <h5 className="text-sm font-semibold text-slate-900">Selected Tools / Repos</h5>
-                  <ul className="mt-2 space-y-1 text-sm text-slate-700">
-                    {(windGroup?.items ?? []).map((item) => (
-                      <li key={item.label} className="flex flex-wrap gap-2">
-                        <span className="font-semibold text-slate-900">{item.label}</span>
-                        <span>— Internal tooling from Wind project work.</span>
-                        <a
-                          href={item.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-blue-700 hover:underline underline-offset-4"
-                        >
-                          [Link]
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
               </div>
             </div>
           </div>
@@ -303,7 +258,7 @@ export const Experience: React.FC = () => {
         <div className="rounded-2xl border border-slate-200/70 bg-white/85 p-6 md:p-8 shadow-sm">
           <div className="mb-6">
             <h2 className="text-2xl font-semibold text-slate-900 font-display">Research Experience</h2>
-            <p className="text-sm text-slate-600">Current research focus, responsibilities, and related work.</p>
+            <p className="text-sm text-slate-600">Current research focus and responsibilities.</p>
           </div>
 
           <div className="flex flex-col md:flex-row gap-6">
@@ -331,37 +286,9 @@ export const Experience: React.FC = () => {
               </div>
               <ul className="list-disc pl-4 text-sm text-slate-700 space-y-1">
                 <li>Research assistantship in CAD & CG Lab with AI focus.</li>
-                <li>Interests span multimodal systems, long-video understanding, and generative AI.</li>
+                <li>Explores multimodal systems, long-video understanding, and generative AI.</li>
                 <li>Builds data pipelines and evaluation setups for measurable model behavior.</li>
               </ul>
-
-              <div>
-                <h5 className="text-sm font-semibold text-slate-900">Related Work / Projects</h5>
-                <ul className="mt-2 space-y-1 text-sm text-slate-700">
-                  {researchProjects.map((item) => {
-                    const description = projectDescriptions[item.label] || 'Project details forthcoming.';
-                    const slug = slugify(item.label);
-                    const anchor = `proj-${slug}`;
-                    const href = item.url ?? `#${anchor}`;
-                    const isExternal = Boolean(item.url);
-
-                    return (
-                      <li key={item.label} id={anchor} className="flex flex-wrap gap-2">
-                        <span className="font-semibold text-slate-900">{item.label}</span>
-                        <span>— {description}</span>
-                        <a
-                          href={href}
-                          target={isExternal ? '_blank' : undefined}
-                          rel={isExternal ? 'noopener noreferrer' : undefined}
-                          className="text-blue-700 hover:underline underline-offset-4"
-                        >
-                          [Link]
-                        </a>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
             </div>
           </div>
         </div>
