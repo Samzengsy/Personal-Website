@@ -7,7 +7,7 @@ export const Contact: React.FC = () => {
       <div className="rounded-2xl border border-slate-200/70 bg-white/85 p-6 md:p-8 shadow-sm fade-up fade-up-delay-6">
         <h2 className="text-2xl font-semibold text-slate-900 mb-4 font-display">Contact</h2>
         <p className="text-sm text-slate-600 mb-6">
-          Looking for opportunities in AI, Computer Vision, and Multimodal Learning? Feel free to reach out.
+          I welcome academic and industry inquiries. Please feel free to get in touch.
         </p>
         <div className="max-w-md space-y-3 text-sm">
           <div className="flex items-center justify-between gap-4">

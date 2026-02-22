@@ -9,7 +9,11 @@ const lifestyleLinks = [
   { label: 'Fragrance', href: '/lifestyle/fragrance' }
 ];
 
-export const Lifestyle: React.FC = () => {
+interface LifestyleProps {
+  onNavigate?: (path: string) => void;
+}
+
+export const Lifestyle: React.FC<LifestyleProps> = ({ onNavigate }) => {
   return (
     <section id="life" className="mb-10 scroll-mt-24">
       <div className="rounded-2xl border border-slate-200/70 bg-white/85 p-6 md:p-8 shadow-sm fade-up fade-up-delay-5">
@@ -22,6 +26,11 @@ export const Lifestyle: React.FC = () => {
             <a
               key={item.label}
               href={item.href}
+              onClick={(event) => {
+                if (!onNavigate) return;
+                event.preventDefault();
+                onNavigate(item.href);
+              }}
               className="text-sm font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors"
             >
               {item.label}

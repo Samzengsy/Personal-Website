@@ -9,7 +9,8 @@ import {
   User,
   BookOpen,
   Briefcase,
-  Wrench
+  Wrench,
+  Box
 } from 'lucide-react';
 import { SocialLink, NavItem, ProjectGroup } from './types';
 
@@ -47,7 +48,10 @@ export const NAV_ITEMS: NavItem[] = [
   { label: 'Hero', icon: Home, id: 'home' },
   { label: 'About', icon: User, id: 'about' },
   { label: 'Publications', icon: BookOpen, id: 'publications' },
-  { label: 'Experience', icon: Briefcase, id: 'experience' },
+  { label: 'Academic', icon: GraduationCap, id: 'academic' },
+  { label: 'Industry', icon: Briefcase, id: 'industry' },
+  { label: 'Research', icon: BookOpen, id: 'research' },
+  { label: 'Projects', icon: Box, id: 'projects' },
   { label: 'Skills', icon: Wrench, id: 'skills' },
   { label: 'Lifestyle', icon: Camera, id: 'life' },
   { label: 'Contact', icon: MessageSquare, id: 'contact' }
@@ -116,10 +120,38 @@ export const LIFESTYLE_PAGES = {
     title: 'Photography',
     subtitle: 'Studies in light, landscape, and atmosphere.',
     items: [
-      { id: '1', src: `${ASSET_BASE}data/joshua-tree.jpg`, alt: 'Joshua Tree' },
-      { id: '2', src: `${ASSET_BASE}data/yosemite.jpg`, alt: 'Yosemite' },
-      { id: '3', src: `${ASSET_BASE}data/meteor.jpg`, alt: 'Meteor' },
-      { id: '4', src: `${ASSET_BASE}data/los-angeles.jpg`, alt: 'Los Angeles' }
+      {
+        id: '1',
+        src: `${ASSET_BASE}data/joshua-tree.jpg`,
+        alt: 'Joshua Tree',
+        location: 'Joshua Tree',
+        year: 'Not specified',
+        note: 'From existing photography set.'
+      },
+      {
+        id: '2',
+        src: `${ASSET_BASE}data/yosemite.jpg`,
+        alt: 'Yosemite',
+        location: 'Yosemite',
+        year: 'Not specified',
+        note: 'From existing photography set.'
+      },
+      {
+        id: '3',
+        src: `${ASSET_BASE}data/meteor.jpg`,
+        alt: 'Meteor',
+        location: 'Meteor',
+        year: 'Not specified',
+        note: 'From existing photography set.'
+      },
+      {
+        id: '4',
+        src: `${ASSET_BASE}data/los-angeles.jpg`,
+        alt: 'Los Angeles',
+        location: 'Los Angeles',
+        year: 'Not specified',
+        note: 'From existing photography set.'
+      }
     ]
   },
   travel: {

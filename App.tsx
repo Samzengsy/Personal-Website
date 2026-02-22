@@ -4,6 +4,7 @@ import { Hero } from './components/Hero';
 import { About } from './components/About';
 import { Publications } from './components/Publications';
 import { Experience } from './components/Experience';
+import { Projects } from './components/Projects';
 import { Skills } from './components/Skills';
 import { Lifestyle } from './components/Lifestyle';
 import { LifestylePage } from './components/LifestylePage';
@@ -69,7 +70,7 @@ const App: React.FC = () => {
       { threshold: 0.3, rootMargin: '-20% 0px -50% 0px' }
     );
 
-    const sections = ['home', 'about', 'publications', 'experience', 'skills', 'life', 'contact'];
+    const sections = ['home', 'about', 'publications', 'academic', 'industry', 'research', 'projects', 'skills', 'life', 'contact'];
     sections.forEach((id) => {
       const element = document.getElementById(id);
       if (element) observer.observe(element);
@@ -92,8 +93,9 @@ const App: React.FC = () => {
               <About />
               <Publications />
               <Experience />
+              <Projects />
               <Skills />
-              <Lifestyle />
+              <Lifestyle onNavigate={navigate} />
               <Contact />
             </>
           )}
