@@ -120,7 +120,7 @@ export const Experience: React.FC = () => {
                   <h5 className="text-sm font-semibold text-slate-900">Selected Metrics</h5>
                   <div className="mt-3">
                     <p className="text-sm text-gray-500 mb-4">
-                      Visualization highlights from data evaluation and pipeline work:
+                      Performance indicators from production deployment and system validation.
                     </p>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -291,10 +291,10 @@ export const Experience: React.FC = () => {
               </ul>
 
               <div>
-                <div className="flex items-center justify-between mb-4">
-                  <h5 className="text-sm font-semibold text-slate-900">Research Highlights — Zhejiang University</h5>
-                  <span className="text-xs text-slate-500">Selected metrics</span>
-                </div>
+                <h5 className="text-sm font-semibold text-slate-900">Selected Metrics</h5>
+                <p className="text-sm text-gray-500 mb-4">
+                  Experimental results and evaluation indicators from research studies.
+                </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex flex-col">
