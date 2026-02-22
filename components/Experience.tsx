@@ -71,7 +71,7 @@ export const Experience: React.FC = () => {
               <IconBadge label="Gap Period" />
               <div>
                 <div className="text-sm font-semibold text-slate-900">Gap Period</div>
-                <div className="text-xs text-slate-600">Independent study and research preparation</div>
+                <div className="text-xs text-slate-600">Independent study and skill-building through industry internships (Wind) and research training (ZJU).</div>
               </div>
               <div className="text-sm text-slate-500 md:text-right">Mar 2025 – Present</div>
             </div>
@@ -289,6 +289,180 @@ export const Experience: React.FC = () => {
                 <li>Explores multimodal systems, long-video understanding, and generative AI.</li>
                 <li>Builds data pipelines and evaluation setups for measurable model behavior.</li>
               </ul>
+
+              <div>
+                <div className="flex items-center justify-between mb-4">
+                  <h5 className="text-sm font-semibold text-slate-900">Research Highlights — Zhejiang University</h5>
+                  <span className="text-xs text-slate-500">Selected metrics</span>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex flex-col">
+                    <div className="flex items-start justify-between gap-4">
+                      <div>
+                        <h3 className="text-base font-bold text-gray-800 flex items-center">
+                          <span>ReasonMatch F1 Score</span>
+                          <span className="ml-2 text-lg" aria-hidden="true">🏆</span>
+                        </h3>
+                        <p className="text-sm text-gray-500 mt-2">
+                          Top performance on ReasonMatch-Bench, surpassing strong proprietary baselines under the same evaluation.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="mt-5">
+                      <div className="flex items-end justify-between">
+                        <div>
+                          <div className="text-4xl font-black text-gray-900 leading-none">70.5</div>
+                          <div className="text-xs text-gray-500 mt-1">F1 (Qwen3-VL + DCRL)</div>
+                        </div>
+                        <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-indigo-50 text-indigo-700">
+                          Best-in-table
+                        </span>
+                      </div>
+
+                      <div className="mt-5 space-y-4">
+                        <div>
+                          <div className="flex justify-between text-xs font-semibold text-gray-600 mb-1">
+                            <span>This work</span><span>70.5</span>
+                          </div>
+                          <div className="w-full bg-gray-100 rounded-full h-2" role="img" aria-label="This work F1 70.5">
+                            <div className="bg-indigo-600 h-2 rounded-full" style={{ width: '100%' }} />
+                          </div>
+                        </div>
+
+                        <div>
+                          <div className="flex justify-between text-xs font-semibold text-gray-600 mb-1">
+                            <span>GPT-5-mini</span><span>57.9</span>
+                          </div>
+                          <div className="w-full bg-gray-100 rounded-full h-2" role="img" aria-label="GPT-5-mini F1 57.9">
+                            <div className="bg-indigo-300 h-2 rounded-full" style={{ width: '82.1%' }} />
+                          </div>
+                          <div className="text-[11px] text-gray-400 mt-1">Normalized to 70.5 as 100%</div>
+                        </div>
+
+                        <div>
+                          <div className="flex justify-between text-xs font-semibold text-gray-600 mb-1">
+                            <span>Gemini-2.5-Pro</span><span>42.8</span>
+                          </div>
+                          <div className="w-full bg-gray-100 rounded-full h-2" role="img" aria-label="Gemini-2.5-Pro F1 42.8">
+                            <div className="bg-indigo-200 h-2 rounded-full" style={{ width: '60.7%' }} />
+                          </div>
+                        </div>
+                      </div>
+
+                      <p className="text-xs text-gray-400 mt-5">
+                        Notes: Values shown as reported under the same benchmark protocol.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex flex-col">
+                    <div>
+                      <h3 className="text-base font-bold text-gray-800 flex items-center">
+                        <span>OOD Generalization</span>
+                        <span className="ml-2 text-lg" aria-hidden="true">🌍</span>
+                      </h3>
+                      <p className="text-sm text-gray-500 mt-2">
+                        Improved out-of-distribution Avg. F1 across 4 datasets (ETH3D, IMC2022/2024, UnrealStereo4K).
+                      </p>
+                    </div>
+
+                    <div className="mt-6">
+                      <div className="flex items-end justify-between">
+                        <div>
+                          <div className="text-4xl font-black text-gray-900 leading-none">69.5</div>
+                          <div className="text-xs text-gray-500 mt-1">Avg. F1 (OOD)</div>
+                        </div>
+                        <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-50 text-emerald-700">
+                          +38.8
+                          <span className="ml-1" aria-hidden="true">↑</span>
+                        </span>
+                      </div>
+
+                      <div className="mt-5">
+                        <div className="flex justify-between text-xs font-semibold text-gray-600 mb-1">
+                          <span>Baseline Avg</span><span>30.7</span>
+                        </div>
+                        <div className="w-full bg-gray-100 rounded-full h-2" role="img" aria-label="Baseline Avg F1 30.7">
+                          <div className="bg-gray-300 h-2 rounded-full" style={{ width: '44.2%' }} />
+                        </div>
+
+                        <div className="flex justify-between text-xs font-semibold text-gray-600 mb-1 mt-4">
+                          <span>This work Avg</span><span>69.5</span>
+                        </div>
+                        <div className="w-full bg-gray-100 rounded-full h-2" role="img" aria-label="This work Avg F1 69.5">
+                          <div className="bg-indigo-600 h-2 rounded-full" style={{ width: '100%' }} />
+                        </div>
+
+                        <div className="text-[11px] text-gray-400 mt-2">
+                          Normalized to 69.5 as 100% for visual comparison.
+                        </div>
+                      </div>
+
+                      <div className="mt-5 flex flex-wrap gap-2">
+                        <span className="px-2.5 py-1 rounded-full text-xs bg-gray-50 text-gray-600 border border-gray-100">ETH3D</span>
+                        <span className="px-2.5 py-1 rounded-full text-xs bg-gray-50 text-gray-600 border border-gray-100">IMC2022</span>
+                        <span className="px-2.5 py-1 rounded-full text-xs bg-gray-50 text-gray-600 border border-gray-100">IMC2024</span>
+                        <span className="px-2.5 py-1 rounded-full text-xs bg-gray-50 text-gray-600 border border-gray-100">UnrealStereo4K</span>
+                      </div>
+                    </div>
+
+                    <div className="mt-auto pt-6">
+                      <p className="text-xs text-gray-400">
+                        Takeaway: gains persist under distribution shift, not just on the in-domain benchmark.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow relative overflow-hidden flex flex-col">
+                    <div className="absolute -bottom-6 -right-6 w-28 h-28 bg-indigo-100 rounded-full blur-2xl opacity-60" />
+
+                    <div>
+                      <h3 className="text-base font-bold text-gray-800 flex items-center">
+                        <span>Evaluation Pipeline</span>
+                        <span className="ml-2 text-lg" aria-hidden="true">⚙️</span>
+                      </h3>
+                      <p className="text-sm text-gray-500 mt-2">
+                        Built reproducible vLLM-based evaluation runners (offline eval + visual audits), enabling scalable model benchmarking.
+                      </p>
+                    </div>
+
+                    <div className="mt-6">
+                      <div className="flex items-end justify-between">
+                        <div>
+                          <div className="text-4xl font-black text-gray-900 leading-none">981</div>
+                          <div className="text-xs text-gray-500 mt-1">PointArena samples</div>
+                        </div>
+                        <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-indigo-50 text-indigo-700">
+                          vLLM + offline eval
+                        </span>
+                      </div>
+
+                      <div className="mt-5">
+                        <div className="flex justify-between text-xs font-semibold text-gray-600 mb-1">
+                          <span>Accuracy</span><span>68.7%</span>
+                        </div>
+                        <div className="w-full bg-gray-100 rounded-full h-2" role="img" aria-label="PointArena accuracy 68.7%">
+                          <div className="bg-indigo-600 h-2 rounded-full" style={{ width: '68.7%' }} />
+                        </div>
+
+                        <div className="mt-4 flex flex-wrap gap-2">
+                          <span className="px-2.5 py-1 rounded-full text-xs bg-gray-50 text-gray-600 border border-gray-100">Visual audits</span>
+                          <span className="px-2.5 py-1 rounded-full text-xs bg-gray-50 text-gray-600 border border-gray-100">Runbook</span>
+                          <span className="px-2.5 py-1 rounded-full text-xs bg-gray-50 text-gray-600 border border-gray-100">Reproducible</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="mt-auto pt-6">
+                      <p className="text-xs text-gray-400">
+                        Tip: If you have multiple runs, consider linking to a short “Methods” modal/page for metric definitions.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

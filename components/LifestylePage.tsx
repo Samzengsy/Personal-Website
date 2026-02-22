@@ -63,7 +63,7 @@ export const LifestylePage: React.FC<LifestylePageProps> = ({ slug, onBack }) =>
                       />
                     ) : (
                       <div className="w-full h-full flex items-center justify-center text-xs text-slate-400 bg-slate-50">
-                        Image unavailable
+                        Preview unavailable
                       </div>
                     )}
                   </div>

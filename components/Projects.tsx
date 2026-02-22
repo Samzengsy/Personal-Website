@@ -73,24 +73,6 @@ export const Projects: React.FC = () => {
           </div>
 
           <div>
-            <div className="text-xs uppercase tracking-[0.2em] text-slate-500">Independent Project</div>
-            <div className="mt-3 space-y-3">
-              <div className="border-l-2 border-slate-200 pl-4">
-                <div className="text-sm font-semibold text-slate-900">Christmas Tree Interactive Web</div>
-                <div className="text-sm text-slate-600">— {projectDescriptions['Christmas Tree Interactive Web']}</div>
-                <a
-                  href="https://github.com/Samzengsy/Christmas-Tree"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm font-semibold text-blue-700 hover:underline underline-offset-4"
-                >
-                  [GitHub]
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div>
             <div className="text-xs uppercase tracking-[0.2em] text-slate-500">Zhejiang University Projects</div>
             <div className="mt-3 space-y-3">
               {(zju?.items ?? []).map((item) => (
@@ -109,6 +91,24 @@ export const Projects: React.FC = () => {
                   ) : null}
                 </div>
               ))}
+            </div>
+          </div>
+
+          <div>
+            <div className="text-xs uppercase tracking-[0.2em] text-slate-500">Independent Projects</div>
+            <div className="mt-3 space-y-3">
+              <div className="border-l-2 border-slate-200 pl-4">
+                <div className="text-sm font-semibold text-slate-900">Christmas Tree Interactive Web</div>
+                <div className="text-sm text-slate-600">— {projectDescriptions['Christmas Tree Interactive Web']}</div>
+                <a
+                  href="https://github.com/Samzengsy/Christmas-Tree"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-semibold text-blue-700 hover:underline underline-offset-4"
+                >
+                  [GitHub]
+                </a>
+              </div>
             </div>
           </div>
         </div>

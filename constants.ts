@@ -14,8 +14,30 @@ import {
 } from 'lucide-react';
 import { SocialLink, NavItem, ProjectGroup } from './types';
 
-const RAW_BASE_URL = import.meta.env.BASE_URL || '/';
-export const ASSET_BASE = RAW_BASE_URL.endsWith('/') ? RAW_BASE_URL : `${RAW_BASE_URL}/`;
+const getRuntimeBase = () => {
+  const base = import.meta.env.BASE_URL || '/';
+  const ensureSlash = (value: string) => (value.endsWith('/') ? value : `${value}/`);
+
+  if (typeof window === 'undefined') {
+    return ensureSlash(base);
+  }
+
+  if (base === './') {
+    const path = window.location.pathname;
+    const root = path.includes('/lifestyle/') ? path.split('/lifestyle/')[0] : path;
+    const normalized = ensureSlash(root === '' ? '/' : root);
+    return `${window.location.origin}${normalized}`;
+  }
+
+  if (base.startsWith('http')) {
+    return ensureSlash(base);
+  }
+
+  const normalizedBase = base.startsWith('/') ? base : `/${base}`;
+  return `${window.location.origin}${ensureSlash(normalizedBase)}`;
+};
+
+export const ASSET_BASE = getRuntimeBase();
 
 // Using string paths for images in the public/root data directory
 // Note: Ensure the 'data' folder is at the project root and served by the web server
@@ -25,7 +47,7 @@ export const PROFILE = {
   avatar: `${ASSET_BASE}data/selfie.jpg`,
   heroImage: `${ASSET_BASE}data/selfie.jpg`,
   aboutText:
-    'Shenyan Zeng holds a B.S. in Applied Mathematics from UC Santa Barbara and is currently taking a deliberate gap year as a Research Assistant at Zhejiang University\'s State Key Lab of CAD & CG. His research interests are in Artificial Intelligence, especially multimodal systems, long-video understanding, and generative AI. He is motivated by building careful data pipelines and evaluation setups that make model behavior measurable and reproducible. This perspective comes from mathematical training and hands-on work with real-world data, where clarity and rigor matter as much as performance. He values interdisciplinary collaboration, clear communication, and translating research ideas into practical, well-documented systems. Originally from Nanjing, he values observation and craft, whether in field work or everyday life. Outside of research, he enjoys photography, exploring nature, experimenting with cooking, appreciating fragrance, and spending time with dogs. He aims to grow as an early-stage researcher by combining theoretical grounding with practical system building.'
+    'I studied Applied Mathematics at UC Santa Barbara. During my gap year, I explored applied AI through an internship at Wind and research work at Zhejiang University. I’m especially interested in computer vision and multimodal reasoning, and I like building evaluation workflows that make model behavior easier to understand. I also enjoy creating clean data pipelines and small tools that help teams test ideas quickly. This site collects my academic background, project work, and a few personal notes as I continue learning.'
 };
 
 export const HERO_KEYWORDS = [
