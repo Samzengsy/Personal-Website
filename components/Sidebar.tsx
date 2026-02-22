@@ -21,18 +21,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeSection, onNavigate }) =
           </div>
         </div>
 
-        <div className="flex gap-3 lg:mb-6 w-full flex-wrap">
-          {SOCIAL_LINKS.map((link) => (
-            <a
-              key={link.name}
-              href={link.url}
-              className={`p-2 rounded-md transition-transform hover:-translate-y-1 ${link.bgColor || 'bg-slate-200'} ${link.textColor || 'text-slate-700'}`}
-              aria-label={link.name}
-            >
-              <link.icon size={18} />
-            </a>
-          ))}
-        </div>
+        <div className="hidden" aria-hidden="true" />
       </div>
 
       <nav className="w-full hidden lg:block px-6">

@@ -2,7 +2,7 @@ import React from 'react';
 import { PROFILE, RESUME_URL, HERO_KEYWORDS, SOCIAL_LINKS, EMAIL } from '../constants';
 import { Mail, FileText } from 'lucide-react';
 
-const heroSocial = SOCIAL_LINKS.filter((link) => ['GitHub', 'LinkedIn'].includes(link.name));
+const heroSocial = SOCIAL_LINKS.filter((link) => ['GitHub', 'LinkedIn', 'Instagram'].includes(link.name));
 
 export const Hero: React.FC = () => {
   return (
@@ -62,7 +62,7 @@ export const Hero: React.FC = () => {
           </div>
 
           <div className="flex items-center justify-start md:justify-end">
-            <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+            <div className="w-28 h-28 md:w-40 md:h-40 rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
               <img
                 src={PROFILE.heroImage}
                 alt={PROFILE.name}
