@@ -1,14 +1,25 @@
 import React from 'react';
 import { ASSET_BASE } from '../constants';
 
-const Logo: React.FC<{ src: string; alt: string; href: string }> = ({ src, alt, href }) => (
+const Logo: React.FC<{ src: string; alt: string; href: string; sizeClassName?: string }> = ({ src, alt, href, sizeClassName }) => (
   <a
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    className="h-14 w-14 md:h-16 md:w-16 rounded-xl border border-slate-200 bg-white flex items-center justify-center p-2 shadow-sm hover:shadow-md transition-shadow"
+    className={`rounded-xl border border-slate-200 bg-white flex items-center justify-center p-2 shadow-sm hover:shadow-md transition-shadow ${sizeClassName || 'h-14 w-14 md:h-16 md:w-16'}`}
   >
     <img src={src} alt={alt} className="max-h-full max-w-full object-contain" />
+  </a>
+);
+
+const LogoInline: React.FC<{ src: string; alt: string; href: string; heightClassName?: string }> = ({ src, alt, href, heightClassName }) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-4 shadow-sm hover:shadow-md transition-shadow ${heightClassName || 'h-20 md:h-24'}`}
+  >
+    <img src={src} alt={alt} className="h-full w-auto object-contain" />
   </a>
 );
 
@@ -23,22 +34,30 @@ export const Experience: React.FC = () => {
           </div>
 
           <div className="space-y-5">
-            <div className="grid grid-cols-1 md:grid-cols-[auto,1fr,auto] gap-4 items-start">
-              <div className="flex flex-wrap gap-2">
-                <Logo
-                  src={`${ASSET_BASE}data/NFLSXL.png`}
-                  alt="Nanjing Foreign Language School Xianlin Campus crest"
-                  href="https://www.nflsxl.com/51/list.htm"
-                />
-                <Logo
-                  src={`${ASSET_BASE}data/Wasatch-Academy.webp`}
-                  alt="Wasatch Academy crest"
-                  href="https://www.nflsxl.com/51/list.htm"
-                />
-              </div>
-              <div>
-                <div className="text-sm font-semibold text-slate-900">
-                  Nanjing Xianlin Foreign Language School × Wasatch Academy Program
+            <div className="grid grid-cols-1 md:grid-cols-[1fr,auto] gap-4 items-start">
+              <div className="flex flex-col md:flex-row md:items-center gap-4">
+                <div className="flex items-center gap-3">
+                  <Logo
+                    src={`${ASSET_BASE}data/NFLSXL.png`}
+                    alt="Nanjing Foreign Language School Xianlin Campus crest"
+                    href="https://www.nflsxl.com/51/list.htm"
+                    sizeClassName="h-16 w-16 md:h-20 md:w-20"
+                  />
+                  <div className="text-sm font-semibold text-slate-900">
+                    Nanjing Xianlin Foreign Language School
+                  </div>
+                </div>
+                <div className="text-slate-400 font-semibold text-lg md:px-2">×</div>
+                <div className="flex items-center gap-3">
+                  <Logo
+                    src={`${ASSET_BASE}data/Wasatch-Academy.webp`}
+                    alt="Wasatch Academy crest"
+                    href="https://www.nflsxl.com/51/list.htm"
+                    sizeClassName="h-16 w-16 md:h-20 md:w-20"
+                  />
+                  <div className="text-sm font-semibold text-slate-900">
+                    Wasatch Academy Program
+                  </div>
                 </div>
               </div>
               <div className="text-sm text-slate-500 md:text-right">Sep 2018 – Jun 2021</div>
@@ -50,6 +69,7 @@ export const Experience: React.FC = () => {
                   src={`${ASSET_BASE}data/UCSB.png`}
                   alt="UCSB crest"
                   href="https://www.math.ucsb.edu/"
+                  sizeClassName="h-16 w-16 md:h-20 md:w-20"
                 />
               </div>
               <div>
@@ -73,15 +93,8 @@ export const Experience: React.FC = () => {
           </div>
 
           <div className="space-y-6">
-            <div className="flex flex-col md:flex-row gap-6">
-              <div className="flex flex-wrap gap-3">
-                <Logo
-                  src={`${ASSET_BASE}data/wind.webp`}
-                  alt="Wind logo"
-                  href="https://www.wind.com.cn/portal/en/AboutUs/index.html"
-                />
-              </div>
-              <div className="flex-1 space-y-4">
+            <div className="space-y-4">
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                 <div>
                   <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Role</p>
                   <h4 className="text-lg font-semibold text-slate-900">AI Algorithm Engineer Intern</h4>
@@ -96,21 +109,27 @@ export const Experience: React.FC = () => {
                     Official Site
                   </a>
                 </div>
-                <ul className="list-disc pl-4 text-sm text-slate-700 space-y-1">
-                  <li>Evaluated layout service accuracy across key document elements.</li>
-                  <li>Scaled OCR pipeline to create training-ready dataset exports.</li>
-                  <li>Optimized RT-DETR meta-class threshold under evaluation constraints.</li>
-                </ul>
+                <LogoInline
+                  src={`${ASSET_BASE}data/wind.webp`}
+                  alt="Wind logo"
+                  href="https://www.wind.com.cn/portal/en/AboutUs/index.html"
+                />
+              </div>
+              <ul className="list-disc pl-4 text-sm text-slate-700 space-y-1">
+                <li>Evaluated layout service accuracy across key document elements.</li>
+                <li>Scaled OCR pipeline to create training-ready dataset exports.</li>
+                <li>Optimized RT-DETR meta-class threshold under evaluation constraints.</li>
+              </ul>
 
-                <div>
-                  <h5 className="text-sm font-semibold text-slate-900">Selected Metrics</h5>
-                  <div className="mt-3">
-                    <p className="text-sm text-gray-500 mb-4">
-                      Performance indicators from production deployment and system validation.
-                    </p>
+              <div>
+                <h5 className="text-sm font-semibold text-slate-900">Selected Metrics</h5>
+                <div className="mt-3">
+                  <p className="text-sm text-gray-500 mb-4">
+                    Performance indicators from production deployment and system validation.
+                  </p>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                      <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between hover:shadow-md transition-shadow">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between hover:shadow-md transition-shadow">
                         <div>
                           <h3 className="text-lg font-bold text-gray-800 mb-2 flex items-center">
                             <span>Layout Service Accuracy</span>
@@ -231,7 +250,6 @@ export const Experience: React.FC = () => {
                           </p>
                         </div>
                       </div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -247,15 +265,8 @@ export const Experience: React.FC = () => {
             <p className="text-sm text-slate-600">Current research focus and responsibilities.</p>
           </div>
 
-          <div className="flex flex-col md:flex-row gap-6">
-            <div className="flex flex-wrap gap-3">
-              <Logo
-                src={`${ASSET_BASE}data/ZJU.jpg`}
-                alt="Zhejiang University logo"
-                href="http://www.cad.zju.edu.cn/"
-              />
-            </div>
-            <div className="flex-1 space-y-4">
+          <div className="space-y-4">
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
               <div>
                 <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Role</p>
                 <h4 className="text-lg font-semibold text-slate-900">Research Assistant</h4>
@@ -270,6 +281,14 @@ export const Experience: React.FC = () => {
                   Lab Site
                 </a>
               </div>
+              <LogoInline
+                src={`${ASSET_BASE}data/ZJU.jpg`}
+                alt="Zhejiang University logo"
+                href="http://www.cad.zju.edu.cn/"
+                heightClassName="h-20 md:h-28"
+              />
+            </div>
+            <div className="space-y-4">
               <ul className="list-disc pl-4 text-sm text-slate-700 space-y-1">
                 <li>Research assistantship in CAD & CG Lab with AI focus.</li>
                 <li>Explores multimodal systems, long-video understanding, and generative AI.</li>
