@@ -143,9 +143,8 @@ export const LIFESTYLE_PAGES = {
     title: 'Photography',
     subtitle: 'Studies in light, landscape, and atmosphere.',
     intro: [
-      'Gear: Canon EOS 6D Mark II and DJI Pocket 3. 📷',
-      'I prefer natural landscapes over portraits, and fell in love with astrophotography during college. I occasionally shoot cityscapes. 🌌',
-      'Most of these photos were taken while I was studying in the U.S. 🇺🇸'
+      '📷 Photography',
+      'I shoot with a Canon EOS 6D Mark II and a DJI Pocket 3 📸. Compared to portraits, I’m more drawn to natural landscapes — mountains ⛰️, open skies ☁️, quiet light before sunset 🌅. During my university years in the U.S., I fell in love with photographing the night sky ✨. There was something peaceful about standing alone with a tripod under the stars 🌌. Occasionally, I capture city skylines too 🏙️, but most of these photos were taken while I was studying abroad, when I first began carrying a camera everywhere I went 🎒.'
     ],
     items: [
       {
@@ -186,8 +185,8 @@ export const LIFESTYLE_PAGES = {
     title: 'Travel',
     subtitle: 'Places, routes, and observations from the road.',
     intro: [
-      'Born and raised in Nanjing. 📍',
-      'I have visited five continents and more than ten countries, including Thailand, Japan, South Korea, Germany, France, Italy, Switzerland, South Africa, Seychelles, Kenya, the United States, Mexico, Australia, and New Zealand. ✈️'
+      '🌍 Travel',
+      'Born and raised in Nanjing 📍, I’ve always been curious about how different places feel and function 🗺️. Over the years, I’ve traveled across five continents and visited more than ten countries ✈️ — from Thailand 🇹🇭, Japan 🇯🇵, and Korea 🇰🇷, to Germany 🇩🇪, France 🇫🇷, Italy 🇮🇹, and Switzerland 🇨🇭; from South Africa 🇿🇦, Seychelles 🇸🇨, and Kenya 🇰🇪, to the United States 🇺🇸, Mexico 🇲🇽, Australia 🇦🇺, and New Zealand 🇳🇿. Each place reshaped my sense of scale and perspective in its own way 🌍.'
     ],
     items: []
   },
@@ -195,8 +194,8 @@ export const LIFESTYLE_PAGES = {
     title: 'Sports',
     subtitle: 'Movement, discipline, and the habits that keep me sharp.',
     intro: [
-      'I have practiced Chinese martial arts since childhood (Taiji and Baguazhang). 🥋',
-      'I enjoy basketball and strength training, but I also love good food, so I cycle through cutting phases. 🏀'
+      '🏀 Sports',
+      'I started practicing Chinese martial arts when I was young — mainly Tai Chi ☯️ and Baguazhang 🥋. Those early years shaped my sense of balance and discipline 🧘‍♂️. I also enjoy playing basketball ⛹️‍♂️ and going to the gym 💪. To be honest, I love food even more 🍔, which means I often find myself going through repeated cutting phases 🏃‍♂️. It’s an ongoing cycle 🔄.'
     ],
     items: []
   },
@@ -204,8 +203,8 @@ export const LIFESTYLE_PAGES = {
     title: 'Music',
     subtitle: 'Listening notes, live sets, and pieces on repeat.',
     intro: [
-      'I love singing and was a tenor in choir through high school and college. 🎶',
-      'I also play guitar, and singing by the UCSB shoreline felt especially romantic. 🎸'
+      '🎵 Music',
+      'Music has always been part of my life 🎶. I was a tenor in choir during both high school and university 🎤, and I still enjoy singing whenever I get the chance. I also play the guitar 🎸. Some of my favorite memories are from my time at UC Santa Barbara 🌴 — singing by the ocean at sunset felt simple and unexpectedly romantic 🌅🌊.'
     ],
     items: []
   },
@@ -213,8 +212,8 @@ export const LIFESTYLE_PAGES = {
     title: 'Wine Tasting',
     subtitle: 'Notes on regions, pairings, and craft.',
     intro: [
-      'After turning 21 and living in Santa Barbara, I became interested in wine in a strong local wine region. 🍷',
-      'I took the UCSB wine class, explore different bottles regularly, and visit downtown tasting rooms. 🍇'
+      '🍷 Wine Tasting',
+      'After turning 21 and living in Santa Barbara — one of California’s well-known wine regions 🍇 — I naturally became interested in wine 🍷. I took a wine class at UCSB 🎓 and began exploring different varietals and regions on my own 🗺️. I often visited tasting rooms downtown 🥂 and gradually learned to appreciate balance, structure, and how wine evolves with time ⏳. It became less about drinking and more about understanding 💡.'
     ],
     items: []
   }

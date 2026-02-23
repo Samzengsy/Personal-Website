@@ -13,24 +13,25 @@ import { Contact } from './components/Contact';
 const App: React.FC = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [route, setRoute] = useState(window.location.pathname);
+  const [pendingScrollId, setPendingScrollId] = useState<string | null>(null);
+  const [returnSection, setReturnSection] = useState('life');
 
   const isLifestylePage = route.startsWith('/lifestyle/');
   const lifestyleSlug = isLifestylePage ? route.split('/')[2] || '' : '';
 
-  const navigate = (path: string) => {
+  const navigate = (path: string, scrollId?: string) => {
     if (path === route) return;
     window.history.pushState({}, '', path);
     setRoute(path);
+    if (scrollId) {
+      setPendingScrollId(scrollId);
+    }
     window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
   };
 
   const scrollToSection = (id: string) => {
     if (route !== '/') {
-      navigate('/');
-      setTimeout(() => {
-        const element = document.getElementById(id);
-        if (element) element.scrollIntoView({ behavior: 'smooth' });
-      }, 50);
+      navigate('/', id);
       return;
     }
 
@@ -79,6 +80,20 @@ const App: React.FC = () => {
     return () => observer.disconnect();
   }, [route]);
 
+  useEffect(() => {
+    if (route !== '/' || !pendingScrollId) return;
+
+    const timer = window.setTimeout(() => {
+      const element = document.getElementById(pendingScrollId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+      setPendingScrollId(null);
+    }, 50);
+
+    return () => window.clearTimeout(timer);
+  }, [route, pendingScrollId]);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#f6f3ee] via-white to-[#e8f2f7]">
       <Sidebar activeSection={activeSection} onNavigate={scrollToSection} />
@@ -86,7 +101,7 @@ const App: React.FC = () => {
       <main className="lg:pl-80 p-4 md:p-8 lg:p-12 max-w-7xl mx-auto">
         <div className="lg:mt-0 mt-4">
           {isLifestylePage ? (
-            <LifestylePage slug={lifestyleSlug} onBack={() => navigate('/')} />
+            <LifestylePage slug={lifestyleSlug} onBack={() => navigate('/', returnSection)} />
           ) : (
             <>
               <Hero />
@@ -95,7 +110,12 @@ const App: React.FC = () => {
               <Experience />
               <Projects />
               <Skills />
-              <Lifestyle onNavigate={navigate} />
+              <Lifestyle
+                onNavigate={(path) => {
+                  setReturnSection('life');
+                  navigate(path);
+                }}
+              />
               <Contact />
             </>
           )}

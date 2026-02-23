@@ -50,9 +50,17 @@ export const LifestylePage: React.FC<LifestylePageProps> = ({ slug, onBack }) =>
 
         {page.intro && page.intro.length > 0 ? (
           <div className="mt-6 rounded-2xl border border-slate-200 bg-slate-50/70 p-4 text-sm text-slate-700 space-y-2">
-            {page.intro.map((line, index) => (
-              <p key={`${page.title}-intro-${index}`}>{line}</p>
-            ))}
+            {page.intro.map((line, index) => {
+              const isHeading = !line.includes('.') && line.length <= 32;
+              return (
+                <p
+                  key={`${page.title}-intro-${index}`}
+                  className={isHeading ? 'font-semibold text-slate-900' : undefined}
+                >
+                  {line}
+                </p>
+              );
+            })}
           </div>
         ) : null}
 
