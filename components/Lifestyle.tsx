@@ -5,8 +5,7 @@ const lifestyleLinks = [
   { label: 'Travel', href: '/lifestyle/travel' },
   { label: 'Sports', href: '/lifestyle/sports' },
   { label: 'Music', href: '/lifestyle/music' },
-  { label: 'Wine', href: '/lifestyle/wine' },
-  { label: 'Fragrance', href: '/lifestyle/fragrance' }
+  { label: 'Wine Tasting', href: '/lifestyle/wine-tasting' }
 ];
 
 interface LifestyleProps {
@@ -19,7 +18,7 @@ export const Lifestyle: React.FC<LifestyleProps> = ({ onNavigate }) => {
       <div className="rounded-2xl border border-slate-200/70 bg-white/85 p-6 md:p-8 shadow-sm fade-up fade-up-delay-5">
         <h2 className="text-2xl font-semibold text-slate-900 mb-4 font-display">Lifestyle</h2>
         <p className="text-sm md:text-base text-slate-700 max-w-3xl">
-          Beyond research, I stay grounded through photography, travel, sports, music, wine, and fragrance.
+          Beyond research, I stay grounded through photography, travel, sports, music and wine tasting.
         </p>
         <div className="mt-4 flex flex-wrap gap-2">
           {lifestyleLinks.map((item) => (

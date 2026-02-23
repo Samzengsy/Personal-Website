@@ -192,14 +192,9 @@ export const LIFESTYLE_PAGES = {
     subtitle: 'Listening notes, live sets, and pieces on repeat.',
     items: []
   },
-  wine: {
-    title: 'Wine',
+  'wine-tasting': {
+    title: 'Wine Tasting',
     subtitle: 'Notes on regions, pairings, and craft.',
-    items: []
-  },
-  fragrance: {
-    title: 'Fragrance',
-    subtitle: 'Scent, memory, and the small details that linger.',
     items: []
   }
 };
