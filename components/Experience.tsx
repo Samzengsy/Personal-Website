@@ -76,7 +76,7 @@ export const Experience: React.FC = () => {
                 <div className="text-sm font-semibold text-slate-900">University of California, Santa Barbara</div>
                 <div className="text-xs text-slate-600">B.S. in Applied Mathematics</div>
                 <div className="text-xs text-slate-500 mt-1">
-                  Chaotic Dynamics and Bifurcation Theory · Graph/Network Theory · Introduction to differential geometric · Linear Algebra · Numerical Analysis · Ordinary Differential Equations · Probability and Statistics · Real Analysis · Topology
+                  Linear Algebra · Numerical Analysis · Real Analysis · Probability and Statistics · Ordinary Differential Equations · Chaotic Dynamics and Bifurcation Theory · Introduction to Differential Geometry · Topology · Graph and Network Theory
                 </div>
               </div>
               <div className="text-sm text-slate-500 md:text-right">Sep 2021 – Mar 2025</div>
