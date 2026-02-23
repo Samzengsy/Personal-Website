@@ -2,7 +2,7 @@ import React from 'react';
 import { PROJECT_GROUPS } from '../constants';
 
 const projectDescriptions: Record<string, string> = {
-  'Undergrad 1': 'Least squares approximation study with applied analysis on financial data patterns.',
+  'Least Squares in Financial Mathematics': 'Least squares approximation study with applied analysis on financial data patterns.',
   'HOUSING CRISIS AWARENESS CAMPAIGN': 'Report and campaign design examining housing insecurity and public awareness.',
   'Dataset Prep Tools': 'Tooling for dataset preparation and structured export workflows.',
   'Vision Eval Tools': 'Evaluation toolkit for vision model performance and error inspection.',

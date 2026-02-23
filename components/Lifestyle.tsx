@@ -1,7 +1,8 @@
 import React from 'react';
+import { ASSET_BASE } from '../constants';
 
 const lifestyleLinks = [
-  { label: 'Photography', href: '/lifestyle/photography' },
+  { label: 'Photography', href: '/lifestyle/photography', image: `${ASSET_BASE}data/joshua-tree.jpg` },
   { label: 'Travel', href: '/lifestyle/travel' },
   { label: 'Sports', href: '/lifestyle/sports' },
   { label: 'Music', href: '/lifestyle/music' },
@@ -20,7 +21,7 @@ export const Lifestyle: React.FC<LifestyleProps> = ({ onNavigate }) => {
         <p className="text-sm md:text-base text-slate-700 max-w-3xl">
           Beyond research, I stay grounded through photography, travel, sports, music and wine tasting.
         </p>
-        <div className="mt-4 flex flex-wrap gap-2">
+        <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {lifestyleLinks.map((item) => (
             <a
               key={item.label}
@@ -30,9 +31,21 @@ export const Lifestyle: React.FC<LifestyleProps> = ({ onNavigate }) => {
                 event.preventDefault();
                 onNavigate(item.href);
               }}
-              className="text-sm font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors"
+              className="group relative h-32 rounded-2xl border border-slate-200 overflow-hidden bg-slate-50"
             >
-              {item.label}
+              {item.image ? (
+                <img
+                  src={item.image}
+                  alt={item.label}
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              ) : null}
+              <div className={`absolute inset-0 ${item.image ? 'bg-slate-900/35' : 'bg-slate-50'} transition-colors`} />
+              <div className="relative z-10 h-full w-full flex items-center justify-center">
+                <span className={`text-sm font-semibold tracking-wide ${item.image ? 'text-white' : 'text-slate-700'}`}>
+                  {item.label}
+                </span>
+              </div>
             </a>
           ))}
         </div>

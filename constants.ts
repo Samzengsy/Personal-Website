@@ -99,7 +99,7 @@ export const PROJECT_GROUPS: ProjectGroup[] = [
     id: 'undergrad',
     label: 'Undergrad',
     items: [
-      { label: 'Undergrad 1', url: `${ASSET_BASE}data/Math_Final_Project.pdf` },
+      { label: 'Least Squares in Financial Mathematics', url: `${ASSET_BASE}data/Math_Final_Project.pdf` },
       {
         label: 'HOUSING CRISIS AWARENESS CAMPAIGN',
         url: `${ASSET_BASE}data/Final%20Report_%20Housing%20Crisis%20Awareness%20Campaign.pdf`,

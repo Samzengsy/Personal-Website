@@ -1,5 +1,4 @@
 import React from 'react';
-import { GraduationCap } from 'lucide-react';
 import { ASSET_BASE } from '../constants';
 
 const Logo: React.FC<{ src: string; alt: string; href: string }> = ({ src, alt, href }) => (
@@ -11,13 +10,6 @@ const Logo: React.FC<{ src: string; alt: string; href: string }> = ({ src, alt, 
   >
     <img src={src} alt={alt} className="max-h-full max-w-full object-contain" />
   </a>
-);
-
-const IconBadge: React.FC<{ label: string }> = ({ label }) => (
-  <div className="h-14 w-14 md:h-16 md:w-16 rounded-xl border border-slate-200 bg-slate-50 flex items-center justify-center text-slate-500">
-    <GraduationCap size={20} aria-hidden="true" />
-    <span className="sr-only">{label}</span>
-  </div>
 );
 
 export const Experience: React.FC = () => {
@@ -63,17 +55,11 @@ export const Experience: React.FC = () => {
               <div>
                 <div className="text-sm font-semibold text-slate-900">University of California, Santa Barbara</div>
                 <div className="text-xs text-slate-600">B.S. in Applied Mathematics</div>
+                <div className="text-xs text-slate-500 mt-1">
+                  Chaotic Dynamics and Bifurcation Theory · Graph/Network Theory · Introduction to differential geometric · Linear Algebra · Numerical Analysis · Ordinary Differential Equations · Probability and Statistics · Real Analysis · Topology
+                </div>
               </div>
               <div className="text-sm text-slate-500 md:text-right">Sep 2021 – Mar 2025</div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-[auto,1fr,auto] gap-4 items-start">
-              <IconBadge label="Gap Period" />
-              <div>
-                <div className="text-sm font-semibold text-slate-900">Gap Period</div>
-                <div className="text-xs text-slate-600">Independent study and skill-building through industry internships (Wind) and research training (ZJU).</div>
-              </div>
-              <div className="text-sm text-slate-500 md:text-right">Mar 2025 – Present</div>
             </div>
           </div>
         </div>
