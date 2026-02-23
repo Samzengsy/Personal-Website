@@ -10,7 +10,6 @@ export const Hero: React.FC = () => {
       <div className="rounded-2xl border border-slate-200/70 bg-white/85 p-6 md:p-8 shadow-sm backdrop-blur fade-up">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div className="space-y-4">
-            <p className="text-xs uppercase tracking-[0.3em] text-slate-500">Early-stage researcher</p>
             <div>
               <h1 className="text-3xl md:text-4xl font-semibold text-slate-900 font-display">
                 {PROFILE.name}

@@ -43,7 +43,7 @@ export const ASSET_BASE = getRuntimeBase();
 // Note: Ensure the 'data' folder is at the project root and served by the web server
 export const PROFILE = {
   name: 'Shenyan Zeng',
-  title: 'Applied Mathematics B.S. | Research Assistant (CAD & CG Lab)',
+  title: 'Applied Mathematics B.S. | Research Assistant (CAD & CG Lab, Zhejiang University)',
   avatar: `${ASSET_BASE}data/selfie.jpg`,
   heroImage: `${ASSET_BASE}data/selfie.jpg`,
   aboutText:

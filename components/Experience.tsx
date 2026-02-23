@@ -109,11 +109,18 @@ export const Experience: React.FC = () => {
                     Official Site
                   </a>
                 </div>
-                <LogoInline
-                  src={`${ASSET_BASE}data/wind.webp`}
-                  alt="Wind logo"
+                <a
                   href="https://www.wind.com.cn/portal/en/AboutUs/index.html"
-                />
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center"
+                >
+                  <img
+                    src={`${ASSET_BASE}data/wind.webp`}
+                    alt="Wind logo"
+                    className="h-20 md:h-24 w-auto object-contain"
+                  />
+                </a>
               </div>
               <ul className="list-disc pl-4 text-sm text-slate-700 space-y-1">
                 <li>Evaluated layout service accuracy across key document elements.</li>
