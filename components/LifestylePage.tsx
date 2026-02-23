@@ -8,7 +8,7 @@ interface LifestylePageProps {
 }
 
 export const LifestylePage: React.FC<LifestylePageProps> = ({ slug, onBack }) => {
-  const page = (LIFESTYLE_PAGES as Record<string, { title: string; subtitle?: string; items: { id: string; src?: string; alt?: string; location?: string; year?: string; note?: string }[] }>)[slug];
+  const page = (LIFESTYLE_PAGES as Record<string, { title: string; subtitle?: string; intro?: string[]; items: { id: string; src?: string; alt?: string; location?: string; year?: string; note?: string }[] }>)[slug];
   const [brokenImages, setBrokenImages] = useState<Record<string, boolean>>({});
 
   const renderBackButton = () => (
@@ -47,6 +47,14 @@ export const LifestylePage: React.FC<LifestylePageProps> = ({ slug, onBack }) =>
           <p className="text-sm text-slate-600 mt-2">{page.subtitle}</p>
         ) : null}
         <div className="mt-4">{renderBackButton()}</div>
+
+        {page.intro && page.intro.length > 0 ? (
+          <div className="mt-6 rounded-2xl border border-slate-200 bg-slate-50/70 p-4 text-sm text-slate-700 space-y-2">
+            {page.intro.map((line, index) => (
+              <p key={`${page.title}-intro-${index}`}>{line}</p>
+            ))}
+          </div>
+        ) : null}
 
         <div className="mt-6">
           {page.items.length > 0 ? (

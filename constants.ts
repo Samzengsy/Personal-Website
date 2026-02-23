@@ -142,6 +142,11 @@ export const LIFESTYLE_PAGES = {
   photography: {
     title: 'Photography',
     subtitle: 'Studies in light, landscape, and atmosphere.',
+    intro: [
+      'Gear: Canon EOS 6D Mark II and DJI Pocket 3. 📷',
+      'I prefer natural landscapes over portraits, and fell in love with astrophotography during college. I occasionally shoot cityscapes. 🌌',
+      'Most of these photos were taken while I was studying in the U.S. 🇺🇸'
+    ],
     items: [
       {
         id: '1',
@@ -180,21 +185,37 @@ export const LIFESTYLE_PAGES = {
   travel: {
     title: 'Travel',
     subtitle: 'Places, routes, and observations from the road.',
+    intro: [
+      'Born and raised in Nanjing. 📍',
+      'I have visited five continents and more than ten countries, including Thailand, Japan, South Korea, Germany, France, Italy, Switzerland, South Africa, Seychelles, Kenya, the United States, Mexico, Australia, and New Zealand. ✈️'
+    ],
     items: []
   },
   sports: {
     title: 'Sports',
     subtitle: 'Movement, discipline, and the habits that keep me sharp.',
+    intro: [
+      'I have practiced Chinese martial arts since childhood (Taiji and Baguazhang). 🥋',
+      'I enjoy basketball and strength training, but I also love good food, so I cycle through cutting phases. 🏀'
+    ],
     items: []
   },
   music: {
     title: 'Music',
     subtitle: 'Listening notes, live sets, and pieces on repeat.',
+    intro: [
+      'I love singing and was a tenor in choir through high school and college. 🎶',
+      'I also play guitar, and singing by the UCSB shoreline felt especially romantic. 🎸'
+    ],
     items: []
   },
   'wine-tasting': {
     title: 'Wine Tasting',
     subtitle: 'Notes on regions, pairings, and craft.',
+    intro: [
+      'After turning 21 and living in Santa Barbara, I became interested in wine in a strong local wine region. 🍷',
+      'I took the UCSB wine class, explore different bottles regularly, and visit downtown tasting rooms. 🍇'
+    ],
     items: []
   }
 };
