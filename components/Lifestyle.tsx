@@ -2,11 +2,11 @@ import React from 'react';
 import { ASSET_BASE } from '../constants';
 
 const lifestyleLinks = [
-  { label: 'Photography', href: '/lifestyle/photography', image: `${ASSET_BASE}data/joshua-tree.jpg` },
-  { label: 'Travel', href: '/lifestyle/travel' },
+  { label: 'Photography', href: '/lifestyle/photography', image: `${ASSET_BASE}data/Photography/joshua-tree.jpg` },
+  { label: 'Travel', href: '/lifestyle/travel', image: `${ASSET_BASE}data/Travel/Chicago.jpg` },
   { label: 'Sports', href: '/lifestyle/sports' },
-  { label: 'Music', href: '/lifestyle/music' },
-  { label: 'Wine Tasting', href: '/lifestyle/wine-tasting' }
+  { label: 'Music', href: '/lifestyle/music', image: `${ASSET_BASE}data/Music/Choir.jpg` },
+  { label: 'Wine Tasting', href: '/lifestyle/wine-tasting', image: `${ASSET_BASE}data/Wine%20Tasting/Wine%20Class%20at%20UCSB.jpg` }
 ];
 
 interface LifestyleProps {

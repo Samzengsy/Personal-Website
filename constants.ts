@@ -99,11 +99,11 @@ export const PROJECT_GROUPS: ProjectGroup[] = [
     id: 'undergrad',
     label: 'Undergrad',
     items: [
-      { label: 'Least Squares in Financial Mathematics', url: `${ASSET_BASE}data/Math_Final_Project.pdf` },
+      { label: 'Least Squares in Financial Mathematics', url: `${ASSET_BASE}data/Project/Math_Final_Project.pdf` },
       {
         label: 'HOUSING CRISIS AWARENESS CAMPAIGN',
-        url: `${ASSET_BASE}data/Final%20Report_%20Housing%20Crisis%20Awareness%20Campaign.pdf`,
-        thumbnail: `${ASSET_BASE}data/housing-crisis-preview.png`
+        url: `${ASSET_BASE}data/Project/Final%20Report_%20Housing%20Crisis%20Awareness%20Campaign.pdf`,
+        thumbnail: `${ASSET_BASE}data/Project/housing-crisis-preview.png`
       }
     ]
   },
@@ -149,7 +149,7 @@ export const LIFESTYLE_PAGES = {
     items: [
       {
         id: '1',
-        src: `${ASSET_BASE}data/joshua-tree.jpg`,
+        src: `${ASSET_BASE}data/Photography/joshua-tree.jpg`,
         alt: 'Joshua Tree',
         location: 'Joshua Tree',
         year: 'Undated',
@@ -157,7 +157,7 @@ export const LIFESTYLE_PAGES = {
       },
       {
         id: '2',
-        src: `${ASSET_BASE}data/yosemite.jpg`,
+        src: `${ASSET_BASE}data/Photography/yosemite.jpg`,
         alt: 'Yosemite',
         location: 'Yosemite',
         year: 'Undated',
@@ -165,7 +165,7 @@ export const LIFESTYLE_PAGES = {
       },
       {
         id: '3',
-        src: `${ASSET_BASE}data/meteor.jpg`,
+        src: `${ASSET_BASE}data/Photography/meteor.jpg`,
         alt: 'Meteor',
         location: 'Meteor',
         year: 'Undated',
@@ -173,7 +173,7 @@ export const LIFESTYLE_PAGES = {
       },
       {
         id: '4',
-        src: `${ASSET_BASE}data/los-angeles.jpg`,
+        src: `${ASSET_BASE}data/Photography/los-angeles.jpg`,
         alt: 'Los Angeles',
         location: 'Los Angeles',
         year: 'Undated',
@@ -188,7 +188,32 @@ export const LIFESTYLE_PAGES = {
       '🌍 Travel',
       'Born and raised in Nanjing 📍, I’ve always been curious about how different places feel and function 🗺️. Over the years, I’ve traveled across five continents and visited more than ten countries ✈️ — from Thailand 🇹🇭, Japan 🇯🇵, and Korea 🇰🇷, to Germany 🇩🇪, France 🇫🇷, Italy 🇮🇹, and Switzerland 🇨🇭; from South Africa 🇿🇦, Seychelles 🇸🇨, and Kenya 🇰🇪, to the United States 🇺🇸, Mexico 🇲🇽, Australia 🇦🇺, and New Zealand 🇳🇿. Each place reshaped my sense of scale and perspective in its own way 🌍.'
     ],
-    items: []
+    items: [
+      {
+        id: 'travel-1',
+        src: `${ASSET_BASE}data/Travel/Chicago.jpg`,
+        alt: 'Chicago',
+        location: 'Chicago',
+        year: 'Undated',
+        note: 'From travel archive.'
+      },
+      {
+        id: 'travel-2',
+        src: `${ASSET_BASE}data/Travel/Toronto.jpg`,
+        alt: 'Toronto',
+        location: 'Toronto',
+        year: 'Undated',
+        note: 'From travel archive.'
+      },
+      {
+        id: 'travel-3',
+        src: `${ASSET_BASE}data/Travel/Mexico%20City.jpg`,
+        alt: 'Mexico City',
+        location: 'Mexico City',
+        year: 'Undated',
+        note: 'From travel archive.'
+      }
+    ]
   },
   sports: {
     title: 'Sports',
@@ -206,7 +231,24 @@ export const LIFESTYLE_PAGES = {
       '🎵 Music',
       'Music has always been part of my life 🎶. I was a tenor in choir during both high school and university 🎤, and I still enjoy singing whenever I get the chance. I also play the guitar 🎸. Some of my favorite memories are from my time at UC Santa Barbara 🌴 — singing by the ocean at sunset felt simple and unexpectedly romantic 🌅🌊.'
     ],
-    items: []
+    items: [
+      {
+        id: 'music-1',
+        src: `${ASSET_BASE}data/Music/Choir.jpg`,
+        alt: 'Choir',
+        location: 'Choir',
+        year: 'Undated',
+        note: 'From music archive.'
+      },
+      {
+        id: 'music-2',
+        src: `${ASSET_BASE}data/Music/Choir%20Tenor.jpg`,
+        alt: 'Choir Tenor',
+        location: 'Tenor Section',
+        year: 'Undated',
+        note: 'From music archive.'
+      }
+    ]
   },
   'wine-tasting': {
     title: 'Wine Tasting',
@@ -215,6 +257,23 @@ export const LIFESTYLE_PAGES = {
       '🍷 Wine Tasting',
       'After turning 21 and living in Santa Barbara — one of California’s well-known wine regions 🍇 — I naturally became interested in wine 🍷. I took a wine class at UCSB 🎓 and began exploring different varietals and regions on my own 🗺️. I often visited tasting rooms downtown 🥂 and gradually learned to appreciate balance, structure, and how wine evolves with time ⏳. It became less about drinking and more about understanding 💡.'
     ],
-    items: []
+    items: [
+      {
+        id: 'wine-1',
+        src: `${ASSET_BASE}data/Wine%20Tasting/Wine%20Class%20at%20UCSB.jpg`,
+        alt: 'Wine Class at UCSB',
+        location: 'Santa Barbara',
+        year: 'Undated',
+        note: 'From wine tasting archive.'
+      },
+      {
+        id: 'wine-2',
+        src: `${ASSET_BASE}data/Wine%20Tasting/wine%20tasting%20at%20Santa%20Barbara.jpg`,
+        alt: 'Wine Tasting at Santa Barbara',
+        location: 'Santa Barbara',
+        year: 'Undated',
+        note: 'From wine tasting archive.'
+      }
+    ]
   }
 };

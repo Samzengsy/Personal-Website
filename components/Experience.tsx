@@ -38,7 +38,7 @@ export const Experience: React.FC = () => {
               <div className="flex flex-col md:flex-row md:items-center gap-4">
                 <div className="flex items-center gap-3">
                   <Logo
-                    src={`${ASSET_BASE}data/NFLSXL.png`}
+                    src={`${ASSET_BASE}data/Logo/NFLSXL.png`}
                     alt="Nanjing Foreign Language School Xianlin Campus crest"
                     href="https://www.nflsxl.com/51/list.htm"
                     sizeClassName="h-16 w-16 md:h-20 md:w-20"
@@ -50,7 +50,7 @@ export const Experience: React.FC = () => {
                 <div className="text-slate-400 font-semibold text-lg md:px-2">×</div>
                 <div className="flex items-center gap-3">
                   <Logo
-                    src={`${ASSET_BASE}data/Wasatch-Academy.webp`}
+                    src={`${ASSET_BASE}data/Logo/Wasatch-Academy.webp`}
                     alt="Wasatch Academy crest"
                     href="https://www.nflsxl.com/51/list.htm"
                     sizeClassName="h-16 w-16 md:h-20 md:w-20"
@@ -66,7 +66,7 @@ export const Experience: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-[auto,1fr,auto] gap-4 items-start">
               <div className="flex flex-wrap gap-2">
                 <Logo
-                  src={`${ASSET_BASE}data/UCSB.png`}
+                  src={`${ASSET_BASE}data/Logo/UCSB.png`}
                   alt="UCSB crest"
                   href="https://www.math.ucsb.edu/"
                   sizeClassName="h-16 w-16 md:h-20 md:w-20"
@@ -116,7 +116,7 @@ export const Experience: React.FC = () => {
                   className="inline-flex items-center justify-center"
                 >
                   <img
-                    src={`${ASSET_BASE}data/wind.webp`}
+                    src={`${ASSET_BASE}data/Logo/wind.webp`}
                     alt="Wind logo"
                     className="h-20 md:h-24 w-auto object-contain"
                   />
@@ -289,7 +289,7 @@ export const Experience: React.FC = () => {
                 </a>
               </div>
               <LogoInline
-                src={`${ASSET_BASE}data/ZJU.jpg`}
+                src={`${ASSET_BASE}data/Logo/ZJU.jpg`}
                 alt="Zhejiang University logo"
                 href="http://www.cad.zju.edu.cn/"
                 heightClassName="h-20 md:h-28"
