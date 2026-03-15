@@ -49,7 +49,7 @@ export const PROFILE = {
   aboutText:
     `I came to technology through curiosity before ambition. Studying Applied Mathematics at UC Santa Barbara taught me how to think clearly, but what stayed with me even more was the feeling that ideas can become real things, tools, images, systems, and new ways of seeing the world. During my gap year, through work at Wind and research at Zhejiang University, I started to understand that AI is not just a technical field to me. It is a language for building, questioning, and imagining what human creativity might look like when extended by machines.
 
-I am especially drawn to computer vision and multimodal reasoning because they sit close to how people actually experience life: through images, language, memory, and intuition all at once. I like building evaluation workflows, clean data pipelines, and small tools, but what drives me is larger than the tools themselves. I want to grow into someone who can combine technical depth with sensitivity, someone who can help make AI more capable, more understandable, and more human. This site is a small record of that journey: the things I have learned, the things I have built, and the future I am still running toward.`
+I am currently a Research Assistant at the CAD & CG Lab at Zhejiang University, where I continue exploring multimodal AI and generative systems.`
 };
 
 export const HERO_KEYWORDS = [
