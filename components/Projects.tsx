@@ -8,8 +8,8 @@ const projectDescriptions: Record<string, string> = {
   'Vision Eval Tools': 'Evaluation toolkit for vision model performance and error inspection.',
   'Error Analysis UI': 'Interface for exploring model errors and qualitative outputs.',
   'Christmas Tree Interactive Web': 'Interactive particle-based Christmas tree experiment built with Three.js and creative front-end design.',
-  'ZJU 1': 'Lab-based multimodal reasoning prototype evaluated on structured benchmarks.',
-  'ZJU 2': 'Research project studying multimodal understanding with structured evaluation.'
+  'Spatial Reasoning in MLLMs': 'Wide-baseline matching framework for complex spatial reasoning in multimodal models.',
+  'Cinematic Prompting for Long Video': 'Prompt optimization framework for more cinematic long-video storyboards.'
 };
 
 const getLinkLabel = (url?: string) => {

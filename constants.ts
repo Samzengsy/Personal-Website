@@ -47,7 +47,9 @@ export const PROFILE = {
   avatar: `${ASSET_BASE}data/selfie.jpg`,
   heroImage: `${ASSET_BASE}data/selfie.jpg`,
   aboutText:
-    'I studied Applied Mathematics at UC Santa Barbara. During my gap year, I explored applied AI through an internship at Wind and research work at Zhejiang University. I’m especially interested in computer vision and multimodal reasoning, and I like building evaluation workflows that make model behavior easier to understand. I also enjoy creating clean data pipelines and small tools that help teams test ideas quickly. This site collects my academic background, project work, and a few personal notes as I continue learning.'
+    `I came to technology through curiosity before ambition. Studying Applied Mathematics at UC Santa Barbara taught me how to think clearly, but what stayed with me even more was the feeling that ideas can become real things, tools, images, systems, and new ways of seeing the world. During my gap year, through work at Wind and research at Zhejiang University, I started to understand that AI is not just a technical field to me. It is a language for building, questioning, and imagining what human creativity might look like when extended by machines.
+
+I am especially drawn to computer vision and multimodal reasoning because they sit close to how people actually experience life: through images, language, memory, and intuition all at once. I like building evaluation workflows, clean data pipelines, and small tools, but what drives me is larger than the tools themselves. I want to grow into someone who can combine technical depth with sensitivity, someone who can help make AI more capable, more understandable, and more human. This site is a small record of that journey: the things I have learned, the things I have built, and the future I am still running toward.`
 };
 
 export const HERO_KEYWORDS = [
@@ -132,8 +134,8 @@ export const PROJECT_GROUPS: ProjectGroup[] = [
     id: 'zju',
     label: 'ZJU',
     items: [
-      { label: 'ZJU 1' },
-      { label: 'ZJU 2' }
+      { label: 'Spatial Reasoning in MLLMs' },
+      { label: 'Cinematic Prompting for Long Video' }
     ]
   }
 ];
