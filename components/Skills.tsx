@@ -22,7 +22,7 @@ export const Skills: React.FC = () => {
             <div className="space-y-1">
               <div>Build large-scale data pipelines and standardized representations for training and evaluation.</div>
               <div>Redesign annotation strategies and data schemas to improve downstream model behavior.</div>
-              <div>Analyze how dataset structure influences generalization and system robustness.</div>
+              <div>Construct verifiable benchmark data with structured metadata, correspondence labels, and reproducible release paths.</div>
             </div>
           </div>
 
@@ -31,8 +31,8 @@ export const Skills: React.FC = () => {
           <div>
             <h3 className="text-xs uppercase tracking-[0.24em] text-slate-500 mb-2">Spatial &amp; Multimodal Intelligence</h3>
             <div className="space-y-1">
-              <div>Develop perception systems that reason over structure, geometry, and multimodal inputs.</div>
-              <div>Evaluate model behavior across complex spatial and document-level tasks.</div>
+              <div>Develop perception systems that reason over structure, geometry, viewpoint change, and multimodal inputs.</div>
+              <div>Evaluate model behavior across complex spatial matching, document-level, and out-of-distribution tasks.</div>
               <div>Diagnose failure modes in structured and high-variance visual environments.</div>
             </div>
           </div>

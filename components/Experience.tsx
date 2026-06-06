@@ -287,6 +287,24 @@ export const Experience: React.FC = () => {
                 >
                   Lab Site
                 </a>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {[
+                    { label: 'ReasonMatch', url: 'https://aim-uofa.github.io/reasonmatch/' },
+                    { label: 'arXiv', url: 'https://arxiv.org/abs/2606.03577' },
+                    { label: 'GitHub', url: 'https://github.com/aim-uofa/ReasonMatch' },
+                    { label: 'Dataset', url: 'https://huggingface.co/datasets/ReasonMatch/ReasonMatch' }
+                  ].map((link) => (
+                    <a
+                      key={link.label}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center rounded-md border border-blue-200 bg-blue-50 px-2.5 py-1 text-xs font-semibold text-blue-700 hover:border-blue-300 hover:bg-blue-100 transition-colors"
+                    >
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
               </div>
               <LogoInline
                 src={`${ASSET_BASE}data/Logo/ZJU.jpg`}
@@ -297,9 +315,9 @@ export const Experience: React.FC = () => {
             </div>
             <div className="space-y-4">
               <ul className="list-disc pl-4 text-sm text-slate-700 space-y-1">
-                <li>Research assistantship in CAD & CG Lab with AI focus.</li>
-                <li>Explores multimodal systems, long-video understanding, and generative AI.</li>
-                <li>Builds data pipelines and evaluation setups for measurable model behavior.</li>
+                <li>Equal-contribution author on ReasonMatch, a CVPR 2026 paper on complex spatial reasoning in multimodal LLMs.</li>
+                <li>Helped build a verifiable wide-baseline matching benchmark and open-source release for code, data, and evaluation.</li>
+                <li>Works on multimodal evaluation pipelines, dataset construction, and reinforcement-learning recipes for measurable model behavior.</li>
               </ul>
 
               <div>

@@ -8,14 +8,38 @@ const projectDescriptions: Record<string, string> = {
   'Vision Eval Tools': 'Evaluation toolkit for vision model performance and error inspection.',
   'Error Analysis UI': 'Interface for exploring model errors and qualitative outputs.',
   'Christmas Tree Interactive Web': 'Interactive particle-based Christmas tree experiment built with Three.js and creative front-end design.',
-  'Spatial Reasoning in MLLMs': 'Wide-baseline matching framework for complex spatial reasoning in multimodal models.',
+  'ReasonMatch': 'CVPR 2026 open-source benchmark, dataset release, and DCRL training recipe for wide-baseline spatial reasoning in multimodal LLMs.',
   'Cinematic Prompting for Long Video': 'Prompt optimization framework for more cinematic long-video storyboards.'
 };
 
 const getLinkLabel = (url?: string) => {
   if (!url) return null;
   if (url.includes('github.com')) return 'GitHub';
+  if (url.includes('arxiv.org')) return 'arXiv';
+  if (url.includes('huggingface.co')) return 'Dataset';
   return 'Link';
+};
+
+const ProjectLinks: React.FC<{ item: { label: string; url?: string; links?: { label: string; url: string }[] } }> = ({ item }) => {
+  const links = item.links ?? (item.url && getLinkLabel(item.url) ? [{ label: getLinkLabel(item.url) as string, url: item.url }] : []);
+
+  if (links.length === 0) return null;
+
+  return (
+    <div className="mt-2 flex flex-wrap gap-2">
+      {links.map((link) => (
+        <a
+          key={`${item.label}-${link.label}`}
+          href={link.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center rounded-md border border-blue-200 bg-blue-50 px-2.5 py-1 text-xs font-semibold text-blue-700 hover:border-blue-300 hover:bg-blue-100 transition-colors"
+        >
+          {link.label}
+        </a>
+      ))}
+    </div>
+  );
 };
 
 export const Projects: React.FC = () => {
@@ -35,16 +59,7 @@ export const Projects: React.FC = () => {
                 <div key={item.label} className="border-l-2 border-slate-200 pl-4">
                   <div className="text-sm font-semibold text-slate-900">{item.label}</div>
                   <div className="text-sm text-slate-600">— {projectDescriptions[item.label]}</div>
-                  {item.url ? (
-                    <a
-                      href={item.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm font-semibold text-blue-700 hover:underline underline-offset-4"
-                    >
-                      [{getLinkLabel(item.url)}]
-                    </a>
-                  ) : null}
+                  <ProjectLinks item={item} />
                 </div>
               ))}
             </div>
@@ -57,16 +72,7 @@ export const Projects: React.FC = () => {
                 <div key={item.label} className="border-l-2 border-slate-200 pl-4">
                   <div className="text-sm font-semibold text-slate-900">{item.label}</div>
                   <div className="text-sm text-slate-600">— {projectDescriptions[item.label]}</div>
-                  {item.url ? (
-                    <a
-                      href={item.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm font-semibold text-blue-700 hover:underline underline-offset-4"
-                    >
-                      [{getLinkLabel(item.url)}]
-                    </a>
-                  ) : null}
+                  <ProjectLinks item={item} />
                 </div>
               ))}
             </div>
@@ -79,16 +85,7 @@ export const Projects: React.FC = () => {
                 <div key={item.label} className="border-l-2 border-slate-200 pl-4">
                   <div className="text-sm font-semibold text-slate-900">{item.label}</div>
                   <div className="text-sm text-slate-600">— {projectDescriptions[item.label]}</div>
-                  {item.url ? (
-                    <a
-                      href={item.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm font-semibold text-blue-700 hover:underline underline-offset-4"
-                    >
-                      [{getLinkLabel(item.url)}]
-                    </a>
-                  ) : null}
+                  <ProjectLinks item={item} />
                 </div>
               ))}
             </div>

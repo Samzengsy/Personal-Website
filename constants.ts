@@ -54,8 +54,8 @@ I am currently a Research Assistant at the CAD & CG Lab at Zhejiang University, 
 
 export const HERO_KEYWORDS = [
   'Multimodal AI',
-  'Long-Video Understanding',
-  'Generative AI'
+  'Spatial Reasoning',
+  'CVPR 2026'
 ];
 
 export const EMAIL = 'zengshenyan0308@163.com';
@@ -84,14 +84,24 @@ export const NAV_ITEMS: NavItem[] = [
 
 export const PUBLICATIONS = [
   {
-    id: 'cvpr-accepted',
+    id: 'reasonmatch-cvpr-2026',
     title: 'Eliciting Complex Spatial Reasoning in MLLMs through Wide-Baseline Matching',
-    status: 'Accepted to CVPR 2026 (to appear)',
+    status: 'CVPR 2026',
     venue: 'CVPR 2026',
+    authors: 'Hao Zhong*, Muzhi Zhu*, Shenyan Zeng*, Anzhou Li, Cong Chen, Hua Geng, Duochao Shi, Wentao Ye, Tao Lin, Hao Chen, Chunhua Shen',
+    summary:
+      'ReasonMatch turns wide-baseline matching into a scalable, machine-checkable benchmark and training signal for multimodal LLM spatial reasoning. The work introduces ReasonMatch-Bench and Dynamic Correspondence Reinforcement Learning (DCRL), improving an 8B MLLM to 70.5 F1 on ReasonMatch-Bench while preserving transfer to related spatial benchmarks.',
+    highlights: [
+      '2,810 stratified benchmark image pairs across indoor, outdoor, and object-centric scenes.',
+      '220k automatically harvested training pairs from RGB-D videos and SfM reconstructions.',
+      'DCRL combines viewpoint progression, correspondence curriculum, and verifiable matching rewards.'
+    ],
     links: {
-      openReview: undefined,
-      preprint: undefined,
-      project: undefined
+      arxiv: 'https://arxiv.org/abs/2606.03577',
+      pdf: 'https://arxiv.org/pdf/2606.03577v1',
+      project: 'https://aim-uofa.github.io/reasonmatch/',
+      code: 'https://github.com/aim-uofa/ReasonMatch',
+      dataset: 'https://huggingface.co/datasets/ReasonMatch/ReasonMatch'
     }
   }
 ];
@@ -134,7 +144,19 @@ export const PROJECT_GROUPS: ProjectGroup[] = [
     id: 'zju',
     label: 'ZJU',
     items: [
-      { label: 'Spatial Reasoning in MLLMs' },
+      {
+        label: 'ReasonMatch',
+        url: 'https://aim-uofa.github.io/reasonmatch/',
+        thumbnail: 'https://opengraph.githubassets.com/1/aim-uofa/ReasonMatch',
+        links: [
+          { label: 'Project Page', url: 'https://aim-uofa.github.io/reasonmatch/' },
+          { label: 'arXiv', url: 'https://arxiv.org/abs/2606.03577' },
+          { label: 'PDF', url: 'https://arxiv.org/pdf/2606.03577v1' },
+          { label: 'GitHub', url: 'https://github.com/aim-uofa/ReasonMatch' },
+          { label: 'Hugging Face', url: 'https://huggingface.co/datasets/ReasonMatch/ReasonMatch' },
+          { label: 'ModelScope', url: 'https://www.modelscope.cn/datasets/jxzh2020/ReasonMatchBench' }
+        ]
+      },
       { label: 'Cinematic Prompting for Long Video' }
     ]
   }
