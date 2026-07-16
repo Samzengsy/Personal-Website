@@ -11,8 +11,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeSection, onNavigate }) =
     <aside className="w-full lg:w-72 lg:h-screen lg:fixed lg:top-0 lg:left-0 bg-white/90 backdrop-blur shadow-sm lg:shadow-none border-b lg:border-b-0 lg:border-r border-slate-200 z-50 flex flex-col">
       <div className="p-4 lg:p-6 flex lg:flex-col items-center lg:items-start justify-between lg:justify-start w-full gap-4">
         <div className="flex items-center lg:flex-col lg:items-start gap-4 lg:gap-2 lg:w-full">
-          <div className="relative w-12 h-12 lg:w-28 lg:h-28 lg:mb-2 rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex-shrink-0">
-            <img src={PROFILE.avatar} alt={PROFILE.name} className="w-full h-full object-cover" />
+          <div className="relative w-14 h-[4.9rem] lg:w-40 lg:h-56 lg:mb-3 rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 shadow-sm flex-shrink-0">
+            <img src={PROFILE.avatar} alt={PROFILE.name} className="w-full h-full object-contain" />
           </div>
 
           <div className="text-left">
