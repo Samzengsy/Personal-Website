@@ -4,7 +4,6 @@ import { ASSET_BASE } from '../constants';
 const lifestyleLinks = [
   { label: 'Photography', href: '/lifestyle/photography', image: `${ASSET_BASE}data/Photography/joshua-tree.jpg` },
   { label: 'Travel', href: '/lifestyle/travel', image: `${ASSET_BASE}data/Travel/Chicago.jpg` },
-  { label: 'Sports', href: '/lifestyle/sports' },
   { label: 'Music', href: '/lifestyle/music', image: `${ASSET_BASE}data/Music/Choir.jpg` },
   { label: 'Wine Tasting', href: '/lifestyle/wine-tasting', image: `${ASSET_BASE}data/Wine%20Tasting/Wine%20Class%20at%20UCSB.jpg` }
 ];
@@ -19,7 +18,7 @@ export const Lifestyle: React.FC<LifestyleProps> = ({ onNavigate }) => {
       <div className="rounded-2xl border border-slate-200/70 bg-white/85 p-6 md:p-8 shadow-sm fade-up fade-up-delay-5">
         <h2 className="text-2xl font-semibold text-slate-900 mb-4 font-display">Lifestyle</h2>
         <p className="text-sm md:text-base text-slate-700 max-w-3xl">
-          Beyond research, I stay grounded through photography, travel, sports, music and wine tasting.
+          Beyond research, I stay grounded through photography, travel, music and wine tasting.
         </p>
         <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {lifestyleLinks.map((item) => (

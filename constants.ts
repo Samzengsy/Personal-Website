@@ -44,7 +44,7 @@ export const ASSET_BASE = getRuntimeBase();
 export const PROFILE = {
   name: 'Shenyan Zeng',
   title: 'Applied Mathematics B.S. | Research Assistant (CAD & CG Lab, Zhejiang University)',
-  avatar: `${ASSET_BASE}data/selfie.jpg`,
+  avatar: `${ASSET_BASE}data/profile.JPG`,
   heroImage: `${ASSET_BASE}data/selfie.jpg`,
   aboutText:
     `I came to technology through curiosity before ambition. Studying Applied Mathematics at UC Santa Barbara taught me how to think clearly, but what stayed with me even more was the feeling that ideas can become real things, tools, images, systems, and new ways of seeing the world. After graduating from UCSB, through work at Wind and research at Zhejiang University, I started to understand that AI is not just a technical field to me. It is a language for building, questioning, and imagining what human creativity might look like when extended by machines.
@@ -238,15 +238,6 @@ export const LIFESTYLE_PAGES = {
         note: 'From travel archive.'
       }
     ]
-  },
-  sports: {
-    title: 'Sports',
-    subtitle: 'Movement, discipline, and the habits that keep me sharp.',
-    intro: [
-      '🏀 Sports',
-      'I started practicing Chinese martial arts when I was young — mainly Tai Chi ☯️ and Baguazhang 🥋. Those early years shaped my sense of balance and discipline 🧘‍♂️. I also enjoy playing basketball ⛹️‍♂️ and going to the gym 💪. To be honest, I love food even more 🍔, which means I often find myself going through repeated cutting phases 🏃‍♂️. It’s an ongoing cycle 🔄.'
-    ],
-    items: []
   },
   music: {
     title: 'Music',
