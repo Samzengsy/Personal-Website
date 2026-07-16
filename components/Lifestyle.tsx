@@ -20,7 +20,7 @@ export const Lifestyle: React.FC<LifestyleProps> = ({ onNavigate }) => {
         <p className="text-sm md:text-base text-slate-700 max-w-3xl">
           Beyond research, I stay grounded through photography, travel, music and wine tasting.
         </p>
-        <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
           {lifestyleLinks.map((item) => (
             <a
               key={item.label}
