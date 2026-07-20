@@ -14,13 +14,13 @@ interface LifestyleProps {
 
 export const Lifestyle: React.FC<LifestyleProps> = ({ onNavigate }) => {
   return (
-    <section id="life" className="mb-10 scroll-mt-24">
-      <div className="rounded-2xl border border-slate-200/70 bg-white/85 p-6 md:p-8 shadow-sm fade-up fade-up-delay-5">
-        <h2 className="text-2xl font-semibold text-slate-900 mb-4 font-display">Lifestyle</h2>
-        <p className="text-sm md:text-base text-slate-700 max-w-3xl">
+    <section id="life" className="section-block section-block--lifestyle">
+      <div className="section-frame fade-up fade-up-delay-5">
+        <h2 className="section-title">Lifestyle</h2>
+        <p className="section-prose">
           Beyond research, I stay grounded through photography, travel, music and wine tasting.
         </p>
-        <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="lifestyle-grid">
           {lifestyleLinks.map((item) => (
             <a
               key={item.label}
@@ -30,18 +30,18 @@ export const Lifestyle: React.FC<LifestyleProps> = ({ onNavigate }) => {
                 event.preventDefault();
                 onNavigate(item.href);
               }}
-              className="group relative h-32 rounded-2xl border border-slate-200 overflow-hidden bg-slate-50"
+              className="lifestyle-card group"
             >
               {item.image ? (
                 <img
                   src={item.image}
                   alt={item.label}
-                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="lifestyle-card__image"
                 />
               ) : null}
-              <div className={`absolute inset-0 ${item.image ? 'bg-slate-900/35' : 'bg-slate-50'} transition-colors`} />
-              <div className="relative z-10 h-full w-full flex items-center justify-center">
-                <span className={`text-sm font-semibold tracking-wide ${item.image ? 'text-white' : 'text-slate-700'}`}>
+              <div className="lifestyle-card__overlay" />
+              <div className="lifestyle-card__label-wrap">
+                <span className="lifestyle-card__label">
                   {item.label}
                 </span>
               </div>

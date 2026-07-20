@@ -1,0 +1,17 @@
+{
+  "date": "2026-07-20",
+  "task": "portfolio visual redesign",
+  "route": "custom-tuned",
+  "macrostructure": "Long Document",
+  "navigation": "N3 side rail",
+  "footer": "Ft2 inline footer",
+  "genre": "editorial-technical",
+  "theme_axes": "light / roman-serif / cool",
+  "constraints": [
+    "preserve structure",
+    "preserve routes",
+    "preserve content and data",
+    "preserve assets"
+  ],
+  "status": "approved-by-user"
+}

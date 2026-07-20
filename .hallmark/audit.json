@@ -1,0 +1,35 @@
+{
+  "date": "2026-07-20",
+  "version": "1.1.0",
+  "result": "pass",
+  "route": "custom-tuned",
+  "macrostructure": "Long Document",
+  "theme_axes": "light / roman-serif / cool",
+  "gates": {
+    "banned_display_fonts": "pass",
+    "oklch_token_palette": "pass",
+    "tinted_neutrals": "pass",
+    "accent_footprint": "pass",
+    "no_gradients": "pass",
+    "no_emoji_feature_icons": "pass",
+    "no_transition_all": "pass",
+    "visible_focus": "pass",
+    "reduced_motion": "pass",
+    "mobile_navigation": "pass",
+    "responsive_overflow": "pass",
+    "semantic_landmarks": "pass",
+    "data_preservation": "pass"
+  },
+  "verification": {
+    "target_widths": [320, 375, 414, 768, 1440],
+    "console_warnings_or_errors": 0,
+    "broken_images": 0,
+    "main_sections": 10,
+    "lifestyle_route": "pass",
+    "typecheck": "pass",
+    "production_build": "pass",
+    "production_dependency_vulnerabilities": 0,
+    "full_dependency_vulnerabilities_after_patch": 0,
+    "protected_files": ["constants.ts", "types.ts"]
+  }
+}

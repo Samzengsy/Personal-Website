@@ -20,7 +20,7 @@ export const LifestylePage: React.FC<LifestylePageProps> = ({ slug, onBack }) =>
           onBack();
         }
       }}
-      className="inline-flex items-center gap-2 text-sm font-semibold text-slate-700 hover:text-slate-900 border border-slate-200 px-3 py-1.5 rounded-lg"
+      className="button button--secondary lifestyle-back"
     >
       <ArrowLeft size={16} />
       ← Back to Main Page
@@ -29,33 +29,33 @@ export const LifestylePage: React.FC<LifestylePageProps> = ({ slug, onBack }) =>
 
   if (!page) {
     return (
-      <section className="max-w-4xl mx-auto">
-        <div className="rounded-2xl border border-slate-200/70 bg-white/85 p-6 md:p-8 shadow-sm">
-          <h1 className="text-3xl font-semibold text-slate-900 font-display">Lifestyle</h1>
-          <p className="text-sm text-slate-600 mt-2">This page is not available yet.</p>
-          <div className="mt-4">{renderBackButton()}</div>
+      <section className="lifestyle-page">
+        <div className="lifestyle-page__frame">
+          <h1 className="page-title">Lifestyle</h1>
+          <p className="section-deck">This page is not available yet.</p>
+          <div className="lifestyle-page__back">{renderBackButton()}</div>
         </div>
       </section>
     );
   }
 
   return (
-    <section className="max-w-4xl mx-auto">
-      <div className="rounded-2xl border border-slate-200/70 bg-white/85 p-6 md:p-8 shadow-sm">
-        <h1 className="text-3xl font-semibold text-slate-900 font-display">{page.title}</h1>
+    <section className="lifestyle-page">
+      <div className="lifestyle-page__frame">
+        <h1 className="page-title">{page.title}</h1>
         {page.subtitle ? (
-          <p className="text-sm text-slate-600 mt-2">{page.subtitle}</p>
+          <p className="section-deck">{page.subtitle}</p>
         ) : null}
-        <div className="mt-4">{renderBackButton()}</div>
+        <div className="lifestyle-page__back">{renderBackButton()}</div>
 
         {page.intro && page.intro.length > 0 ? (
-          <div className="mt-6 rounded-2xl border border-slate-200 bg-slate-50/70 p-4 text-sm text-slate-700 space-y-2">
+          <div className="lifestyle-intro">
             {page.intro.map((line, index) => {
               const isHeading = !line.includes('.') && line.length <= 32;
               return (
                 <p
                   key={`${page.title}-intro-${index}`}
-                  className={isHeading ? 'font-semibold text-slate-900' : undefined}
+                  className={isHeading ? 'lifestyle-intro__heading' : undefined}
                 >
                   {line}
                 </p>
@@ -64,41 +64,41 @@ export const LifestylePage: React.FC<LifestylePageProps> = ({ slug, onBack }) =>
           </div>
         ) : null}
 
-        <div className="mt-6">
+        <div className="lifestyle-gallery-wrap">
           {page.items.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+            <div className="lifestyle-gallery">
               {page.items.map((item) => (
-                <div key={item.id} className="rounded-xl overflow-hidden border border-slate-200 bg-white shadow-sm">
-                  <div className="aspect-square">
+                <article key={item.id} className="gallery-card">
+                  <div className="gallery-card__media">
                     {item.src && !brokenImages[item.id] ? (
                       <img
                         src={item.src}
                         alt={item.alt || page.title}
-                        className="w-full h-full object-cover"
+                        className="h-full w-full object-cover"
                         onError={() => setBrokenImages((prev) => ({ ...prev, [item.id]: true }))}
                       />
                     ) : (
-                      <div className="w-full h-full flex items-center justify-center text-xs text-slate-400 bg-slate-50">
+                      <div className="gallery-card__empty">
                         Preview unavailable
                       </div>
                     )}
                   </div>
-                  <div className="p-3 text-xs text-slate-600 space-y-1">
-                    <div><span className="font-semibold text-slate-800">Location:</span> {item.location || 'Archive'}</div>
-                    <div><span className="font-semibold text-slate-800">Year:</span> {item.year || 'Undated'}</div>
-                    <div><span className="font-semibold text-slate-800">Note:</span> {item.note || 'Stored in personal archive.'}</div>
+                  <div className="gallery-card__meta">
+                    <div><span>Location:</span> {item.location || 'Archive'}</div>
+                    <div><span>Year:</span> {item.year || 'Undated'}</div>
+                    <div><span>Note:</span> {item.note || 'Stored in personal archive.'}</div>
                   </div>
-                </div>
+                </article>
               ))}
             </div>
           ) : (
-            <div className="min-h-[140px] rounded-xl border border-dashed border-slate-200 bg-slate-50 flex items-center justify-center text-sm text-slate-500">
+            <div className="gallery-empty-state">
               No entries yet. Content coming soon.
             </div>
           )}
         </div>
 
-        <div className="mt-8">{renderBackButton()}</div>
+        <div className="lifestyle-page__back lifestyle-page__back--footer">{renderBackButton()}</div>
       </div>
     </section>
   );

@@ -95,11 +95,11 @@ const App: React.FC = () => {
   }, [route, pendingScrollId]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#f6f3ee] via-white to-[#e8f2f7]">
+    <div className="site-shell">
       <Sidebar activeSection={activeSection} onNavigate={scrollToSection} />
 
-      <main className="lg:pl-80 p-4 md:p-8 lg:p-12 max-w-7xl mx-auto">
-        <div className="lg:mt-0 mt-4">
+      <main className="site-main">
+        <div className="content-root">
           {isLifestylePage ? (
             <LifestylePage slug={lifestyleSlug} onBack={() => navigate('/', returnSection)} />
           ) : (
@@ -122,7 +122,7 @@ const App: React.FC = () => {
         </div>
 
         {!isLifestylePage ? (
-          <footer className="mt-16 py-8 border-t border-slate-200 text-center text-slate-500 text-sm">
+          <footer className="site-footer">
             <p>© {new Date().getFullYear()} Shenyan Zeng. Built with React & Tailwind.</p>
           </footer>
         ) : null}

@@ -26,14 +26,14 @@ const ProjectLinks: React.FC<{ item: { label: string; url?: string; links?: { la
   if (links.length === 0) return null;
 
   return (
-    <div className="mt-2 flex flex-wrap gap-2">
+    <div className="link-cluster project-link-cluster">
       {links.map((link) => (
         <a
           key={`${item.label}-${link.label}`}
           href={link.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center rounded-md border border-blue-200 bg-blue-50 px-2.5 py-1 text-xs font-semibold text-blue-700 hover:border-blue-300 hover:bg-blue-100 transition-colors"
+          className="text-link-chip"
         >
           {link.label}
         </a>
@@ -48,64 +48,64 @@ export const Projects: React.FC = () => {
   const zju = PROJECT_GROUPS.find((group) => group.id === 'zju');
 
   return (
-    <section id="projects" className="mb-10 scroll-mt-24">
-      <div className="rounded-2xl border border-slate-200/70 bg-white/85 p-6 md:p-8 shadow-sm fade-up fade-up-delay-4">
-        <h2 className="text-2xl font-semibold text-slate-900 mb-4 font-display">Projects</h2>
-        <div className="space-y-6">
+    <section id="projects" className="section-block section-block--projects">
+      <div className="section-frame fade-up fade-up-delay-4">
+        <h2 className="section-title">Projects</h2>
+        <div className="project-groups">
           <div>
-            <div className="text-xs uppercase tracking-[0.2em] text-slate-500">Undergraduate Projects</div>
-            <div className="mt-3 space-y-3">
+            <div className="eyebrow">Undergraduate Projects</div>
+            <div className="project-list">
               {(undergrad?.items ?? []).map((item) => (
-                <div key={item.label} className="border-l-2 border-slate-200 pl-4">
-                  <div className="text-sm font-semibold text-slate-900">{item.label}</div>
-                  <div className="text-sm text-slate-600">— {projectDescriptions[item.label]}</div>
+                <article key={item.label} className="project-item">
+                  <h3 className="project-title">{item.label}</h3>
+                  <div className="project-description">— {projectDescriptions[item.label]}</div>
                   <ProjectLinks item={item} />
-                </div>
+                </article>
               ))}
             </div>
           </div>
 
           <div>
-            <div className="text-xs uppercase tracking-[0.2em] text-slate-500">Wind Projects</div>
-            <div className="mt-3 space-y-3">
+            <div className="eyebrow">Wind Projects</div>
+            <div className="project-list">
               {(wind?.items ?? []).map((item) => (
-                <div key={item.label} className="border-l-2 border-slate-200 pl-4">
-                  <div className="text-sm font-semibold text-slate-900">{item.label}</div>
-                  <div className="text-sm text-slate-600">— {projectDescriptions[item.label]}</div>
+                <article key={item.label} className="project-item">
+                  <h3 className="project-title">{item.label}</h3>
+                  <div className="project-description">— {projectDescriptions[item.label]}</div>
                   <ProjectLinks item={item} />
-                </div>
+                </article>
               ))}
             </div>
           </div>
 
           <div>
-            <div className="text-xs uppercase tracking-[0.2em] text-slate-500">Zhejiang University Projects</div>
-            <div className="mt-3 space-y-3">
+            <div className="eyebrow">Zhejiang University Projects</div>
+            <div className="project-list">
               {(zju?.items ?? []).map((item) => (
-                <div key={item.label} className="border-l-2 border-slate-200 pl-4">
-                  <div className="text-sm font-semibold text-slate-900">{item.label}</div>
-                  <div className="text-sm text-slate-600">— {projectDescriptions[item.label]}</div>
+                <article key={item.label} className="project-item">
+                  <h3 className="project-title">{item.label}</h3>
+                  <div className="project-description">— {projectDescriptions[item.label]}</div>
                   <ProjectLinks item={item} />
-                </div>
+                </article>
               ))}
             </div>
           </div>
 
           <div>
-            <div className="text-xs uppercase tracking-[0.2em] text-slate-500">Independent Projects</div>
-            <div className="mt-3 space-y-3">
-              <div className="border-l-2 border-slate-200 pl-4">
-                <div className="text-sm font-semibold text-slate-900">Christmas Tree Interactive Web</div>
-                <div className="text-sm text-slate-600">— {projectDescriptions['Christmas Tree Interactive Web']}</div>
+            <div className="eyebrow">Independent Projects</div>
+            <div className="project-list">
+              <article className="project-item">
+                <h3 className="project-title">Christmas Tree Interactive Web</h3>
+                <div className="project-description">— {projectDescriptions['Christmas Tree Interactive Web']}</div>
                 <a
                   href="https://github.com/Samzengsy/Christmas-Tree"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm font-semibold text-blue-700 hover:underline underline-offset-4"
+                  className="inline-link project-inline-link"
                 >
                   [GitHub]
                 </a>
-              </div>
+              </article>
             </div>
           </div>
         </div>

@@ -2,40 +2,36 @@ import React from 'react';
 
 export const Skills: React.FC = () => {
   return (
-    <section id="skills" className="mb-10 scroll-mt-24">
-      <div className="rounded-2xl border border-slate-200/70 bg-white/85 p-6 md:p-8 shadow-sm fade-up fade-up-delay-4">
-        <h2 className="text-2xl font-semibold text-slate-900 mb-4 font-display">Skills</h2>
-        <div className="space-y-6 text-sm text-slate-700">
-          <div>
-            <h3 className="text-xs uppercase tracking-[0.24em] text-slate-500 mb-2">AI Systems Engineering</h3>
-            <div className="space-y-1">
+    <section id="skills" className="section-block section-block--skills">
+      <div className="section-frame fade-up fade-up-delay-4">
+        <h2 className="section-title">Skills</h2>
+        <div className="skills-grid">
+          <article className="skill-group">
+            <h3 className="eyebrow">AI Systems Engineering</h3>
+            <div className="skill-lines">
               <div>Design and deploy end-to-end AI systems across training, evaluation, and production environments.</div>
               <div>Optimize model performance under real-world latency, memory, and reliability constraints.</div>
               <div>Translate research prototypes into stable, maintainable workflows.</div>
             </div>
-          </div>
+          </article>
 
-          <div className="h-px bg-slate-200/70" />
-
-          <div>
-            <h3 className="text-xs uppercase tracking-[0.24em] text-slate-500 mb-2">Data-Centric Modeling</h3>
-            <div className="space-y-1">
+          <article className="skill-group">
+            <h3 className="eyebrow">Data-Centric Modeling</h3>
+            <div className="skill-lines">
               <div>Build large-scale data pipelines and standardized representations for training and evaluation.</div>
               <div>Redesign annotation strategies and data schemas to improve downstream model behavior.</div>
               <div>Construct verifiable benchmark data with structured metadata, correspondence labels, and reproducible release paths.</div>
             </div>
-          </div>
+          </article>
 
-          <div className="h-px bg-slate-200/70" />
-
-          <div>
-            <h3 className="text-xs uppercase tracking-[0.24em] text-slate-500 mb-2">Spatial &amp; Multimodal Intelligence</h3>
-            <div className="space-y-1">
+          <article className="skill-group">
+            <h3 className="eyebrow">Spatial &amp; Multimodal Intelligence</h3>
+            <div className="skill-lines">
               <div>Develop perception systems that reason over structure, geometry, viewpoint change, and multimodal inputs.</div>
               <div>Evaluate model behavior across complex spatial matching, document-level, and out-of-distribution tasks.</div>
               <div>Diagnose failure modes in structured and high-variance visual environments.</div>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
