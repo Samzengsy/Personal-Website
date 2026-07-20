@@ -4,6 +4,15 @@
     "macrostructure": "Long Document",
     "theme": "custom",
     "theme_axes": "light / roman-serif / cool",
+    "vibe": "bright blue, tactile, data-legible, motion-aware",
+    "enrichment": "viewport reveals, reading progress, semantic data colour, enlarged logo stages",
+    "brief": "Corrective refinement after user feedback; preserve structure and content"
+  },
+  {
+    "date": "2026-07-20",
+    "macrostructure": "Long Document",
+    "theme": "custom",
+    "theme_axes": "light / roman-serif / cool",
     "vibe": "bright cobalt, precise, editorial, research-led",
     "enrichment": "existing portfolio imagery and datasets",
     "brief": "Personal website visual redesign without content or structure changes"

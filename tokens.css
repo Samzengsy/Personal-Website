@@ -1,9 +1,9 @@
 :root {
   color-scheme: light;
 
-  --color-paper: oklch(97.5% 0.012 252);
-  --color-paper-2: oklch(94.5% 0.018 252);
-  --color-paper-3: oklch(90.5% 0.026 252);
+  --color-paper: oklch(98.2% 0.010 252);
+  --color-paper-2: oklch(96.0% 0.018 252);
+  --color-paper-3: oklch(91.5% 0.034 252);
   --color-ink: oklch(19% 0.038 252);
   --color-ink-2: oklch(31% 0.034 252);
   --color-muted: oklch(50% 0.026 252);
@@ -15,6 +15,17 @@
   --color-accent-ink: oklch(98% 0.010 252);
   --color-focus: oklch(62% 0.21 255);
   --color-positive: oklch(52% 0.11 165);
+  --color-data-cyan: oklch(66% 0.14 220);
+  --color-data-cyan-soft: oklch(93% 0.045 220);
+  --color-data-violet: oklch(60% 0.16 292);
+  --color-data-violet-soft: oklch(94% 0.040 292);
+  --color-data-amber: oklch(72% 0.14 78);
+  --color-data-amber-soft: oklch(95% 0.045 78);
+  --color-data-teal: oklch(58% 0.12 178);
+  --color-data-teal-soft: oklch(94% 0.038 178);
+  --color-overlay-strong: oklch(19% 0.038 252 / 0.50);
+  --color-overlay-soft: oklch(19% 0.038 252 / 0.30);
+  --color-glass: oklch(98.2% 0.010 252 / 0.94);
 
   --font-display: "Fraunces", Georgia, serif;
   --font-body: "Sora", Arial, sans-serif;
@@ -35,6 +46,14 @@
   --radius-md: 0.625rem;
   --radius-lg: 0.875rem;
   --shadow-soft: 0 1rem 3rem oklch(19% 0.038 252 / 0.08);
+  --shadow-raised: 0 1.25rem 2.5rem oklch(19% 0.038 252 / 0.11);
+  --shadow-hover: 0 0.75rem 1.75rem oklch(19% 0.038 252 / 0.10);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+  --dur-long: 480ms;
   --sidebar-width: 18rem;
   --content-width: 72rem;
   --measure: 68ch;

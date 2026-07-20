@@ -37,24 +37,24 @@ export const Experience: React.FC = () => {
           <div className="space-y-5">
             <div className="grid grid-cols-1 md:grid-cols-[1fr,auto] gap-4 items-start">
               <div className="flex flex-col md:flex-row md:items-center gap-4">
-                <div className="flex items-center gap-3">
+                <div className="academic-logo-group flex items-center gap-3">
                   <Logo
                     src={`${ASSET_BASE}data/Logo/NFLSXL.png`}
                     alt="Nanjing Foreign Language School Xianlin Campus crest"
                     href="https://www.nflsxl.com/51/list.htm"
-                    sizeClassName="h-16 w-16 md:h-20 md:w-20"
+                    sizeClassName="h-20 w-40 md:h-28 md:w-64"
                   />
                   <div className="experience-name">
                     Nanjing Xianlin Foreign Language School
                   </div>
                 </div>
                 <div className="experience-joiner md:px-2">×</div>
-                <div className="flex items-center gap-3">
+                <div className="academic-logo-group flex items-center gap-3">
                   <Logo
                     src={`${ASSET_BASE}data/Logo/Wasatch-Academy.webp`}
                     alt="Wasatch Academy crest"
                     href="https://www.nflsxl.com/51/list.htm"
-                    sizeClassName="h-16 w-16 md:h-20 md:w-20"
+                    sizeClassName="h-20 w-20 md:h-28 md:w-28"
                   />
                   <div className="experience-name">
                     Wasatch Academy Program
@@ -70,7 +70,7 @@ export const Experience: React.FC = () => {
                   src={`${ASSET_BASE}data/Logo/UCSB.png`}
                   alt="UCSB crest"
                   href="https://www.math.ucsb.edu/"
-                  sizeClassName="h-16 w-16 md:h-20 md:w-20"
+                  sizeClassName="h-20 w-20 md:h-28 md:w-28"
                 />
               </div>
               <div>
@@ -114,12 +114,12 @@ export const Experience: React.FC = () => {
                   href="https://www.wind.com.cn/portal/en/AboutUs/index.html"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center"
+                  className="company-logo-stage"
                 >
                   <img
                     src={`${ASSET_BASE}data/Logo/wind.webp`}
                     alt="Wind logo"
-                    className="h-20 md:h-24 w-auto object-contain"
+                    className="company-logo-image"
                   />
                 </a>
               </div>
@@ -137,7 +137,7 @@ export const Experience: React.FC = () => {
                   </p>
 
                   <div className="metrics-grid">
-                    <article className="metric-panel">
+                    <article className="metric-panel metric-panel--blue">
                         <div>
                           <h3 className="metric-title">
                             <span>Layout Service Accuracy</span>
@@ -182,7 +182,7 @@ export const Experience: React.FC = () => {
                         </div>
                       </article>
 
-                      <article className="metric-panel">
+                      <article className="metric-panel metric-panel--cyan">
                         <div>
                           <h3 className="metric-title">
                             <span>OCR Pipeline Scale</span>
@@ -198,7 +198,9 @@ export const Experience: React.FC = () => {
                             <svg viewBox="0 0 36 36" className="w-full h-full transform -rotate-90" aria-label="Train split 79.97%">
                               <path className="metric-ring-track" strokeWidth="4" stroke="currentColor" fill="none"
                                 d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                              <path className="metric-ring-value" strokeWidth="4" strokeDasharray="79.97, 100" stroke="currentColor" fill="none"
+                              <path className="metric-ring-value metric-ring-value--cyan" strokeWidth="4" strokeDasharray="79.97, 100" stroke="currentColor" fill="none"
+                                d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                              <path className="metric-ring-value metric-ring-value--amber" strokeWidth="4" strokeDasharray="20.03, 100" strokeDashoffset="-79.97" stroke="currentColor" fill="none"
                                 d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
                             </svg>
 
@@ -210,11 +212,11 @@ export const Experience: React.FC = () => {
 
                           <div className="flex flex-col space-y-2 text-sm text-right">
                             <div className="flex items-center justify-end">
-                              <span className="metric-dot metric-dot--accent" />
+                              <span className="metric-dot metric-dot--cyan" />
                               <span className="metric-legend">Train (79.97%)</span>
                             </div>
                             <div className="flex items-center justify-end">
-                              <span className="metric-dot" />
+                              <span className="metric-dot metric-dot--amber" />
                               <span className="metric-legend">Test (20.03%)</span>
                             </div>
                             <div className="metric-note">
@@ -224,7 +226,7 @@ export const Experience: React.FC = () => {
                         </div>
                       </article>
 
-                      <article className="metric-panel metric-panel--feature">
+                      <article className="metric-panel metric-panel--violet metric-panel--feature">
 
                         <div>
                           <h3 className="metric-title">
@@ -310,7 +312,7 @@ export const Experience: React.FC = () => {
                 src={`${ASSET_BASE}data/Logo/ZJU.jpg`}
                 alt="Zhejiang University logo"
                 href="http://www.cad.zju.edu.cn/"
-                heightClassName="h-20 md:h-28"
+                heightClassName="h-24 md:h-32"
               />
             </div>
             <div className="space-y-4">
@@ -327,7 +329,7 @@ export const Experience: React.FC = () => {
                 </p>
 
                 <div className="metrics-grid">
-                  <article className="metric-panel">
+                  <article className="metric-panel metric-panel--blue">
                     <div className="flex items-start justify-between gap-4">
                       <div>
                         <h3 className="metric-title">
@@ -366,7 +368,7 @@ export const Experience: React.FC = () => {
                             <span>GPT-5-mini</span><span>57.9</span>
                           </div>
                           <div className="metric-track" role="img" aria-label="GPT-5-mini F1 57.9">
-                            <div className="metric-fill metric-fill--medium" style={{ width: '82.1%' }} />
+                            <div className="metric-fill metric-fill--violet" style={{ width: '82.1%' }} />
                           </div>
                           <div className="metric-note">Normalized to 70.5 as 100%</div>
                         </div>
@@ -376,7 +378,7 @@ export const Experience: React.FC = () => {
                             <span>Gemini-2.5-Pro</span><span>42.8</span>
                           </div>
                           <div className="metric-track" role="img" aria-label="Gemini-2.5-Pro F1 42.8">
-                            <div className="metric-fill metric-fill--soft" style={{ width: '60.7%' }} />
+                            <div className="metric-fill metric-fill--cyan" style={{ width: '60.7%' }} />
                           </div>
                         </div>
                       </div>
@@ -387,7 +389,7 @@ export const Experience: React.FC = () => {
                     </div>
                   </article>
 
-                  <article className="metric-panel">
+                  <article className="metric-panel metric-panel--teal">
                     <div>
                       <h3 className="metric-title">
                         <span>OOD Generalization</span>
@@ -415,14 +417,14 @@ export const Experience: React.FC = () => {
                           <span>Baseline Avg</span><span>30.7</span>
                         </div>
                         <div className="metric-track" role="img" aria-label="Baseline Avg F1 30.7">
-                          <div className="metric-fill metric-fill--baseline" style={{ width: '44.2%' }} />
+                          <div className="metric-fill metric-fill--amber" style={{ width: '44.2%' }} />
                         </div>
 
                         <div className="metric-row-label mt-4">
                           <span>This work Avg</span><span>69.5</span>
                         </div>
                         <div className="metric-track" role="img" aria-label="This work Avg F1 69.5">
-                          <div className="metric-fill" style={{ width: '100%' }} />
+                          <div className="metric-fill metric-fill--teal" style={{ width: '100%' }} />
                         </div>
 
                         <div className="metric-note">
@@ -445,7 +447,7 @@ export const Experience: React.FC = () => {
                     </div>
                   </article>
 
-                  <article className="metric-panel metric-panel--feature">
+                  <article className="metric-panel metric-panel--violet metric-panel--feature">
 
                     <div>
                       <h3 className="metric-title">

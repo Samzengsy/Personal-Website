@@ -12,7 +12,8 @@
 
 - Paper: cool, blue-tinted near-white (`oklch(97.5% 0.012 252)`)
 - Ink: deep navy (`oklch(19% 0.038 252)`)
-- Accent: cobalt blue (`oklch(57% 0.19 255)`), reserved for active states, important links, and data signals
+- Accent: cobalt blue (`oklch(57% 0.19 255)`), reserved for active states, important links, and primary data signals
+- Data palette: cobalt for primary results, cyan for scale/training data, violet for model comparisons, teal for gains, and amber for baselines; colour is always paired with a label or value
 - Display: Fraunces, used for names and primary section headings
 - Body: Sora, used for navigation, prose, labels, and data
 - Theme axes: light / roman-serif / cool
@@ -31,14 +32,16 @@ All implementation values are exported from `tokens.css`. Components consume sem
 - Navigation: cobalt active rail, no pill-heavy desktop treatment, clear keyboard focus.
 - Buttons: one filled primary action and one bordered secondary action.
 - Tags: compact square-ended labels with restrained tinted surfaces.
-- Cards: borders and spacing establish hierarchy; shadows are reserved for the primary hero surface.
-- Metrics: unchanged numeric values, represented by labeled bars, comparison rows, and restrained signal colour.
+- Cards: borders and spacing establish hierarchy; hover elevation is reserved for surfaces that benefit from inspection feedback.
+- Logos: institutions and companies receive large, dedicated display stages; brand marks must not be reduced to small inline icons.
+- Metrics: unchanged numeric values, represented by labeled bars, comparison rows, and a semantic multi-colour data palette under the blue-led system.
 - Timeline: consistent date rail and evidence-first content grouping.
 
 ## Motion
 
-- One orchestrated entrance primitive for first paint.
-- Short colour/position feedback for interactive controls.
+- One-shot viewport reveals begin only when a major section enters view; compact and reduced-motion viewports show content immediately.
+- Data bars reveal with their section, and the top reading-progress rule tracks page movement.
+- Clear position feedback for buttons, navigation, logos, cards, and imagery on hover/focus, using transform and opacity only for spatial motion.
 - No looping decoration; `prefers-reduced-motion` disables non-essential motion.
 
 ## Responsive and accessibility

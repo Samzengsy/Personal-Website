@@ -81,6 +81,33 @@ const App: React.FC = () => {
   }, [route]);
 
   useEffect(() => {
+    const revealItems = Array.from(document.querySelectorAll<HTMLElement>('.fade-up'));
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const compactViewport = window.matchMedia('(max-width: 39.99rem)').matches;
+
+    if (reduceMotion || compactViewport || !('IntersectionObserver' in window)) {
+      revealItems.forEach((item) => item.classList.add('is-visible'));
+      return;
+    }
+
+    revealItems.forEach((item) => item.classList.remove('is-visible'));
+
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.08, rootMargin: '0px 0px -8% 0px' }
+    );
+
+    revealItems.forEach((item) => revealObserver.observe(item));
+    return () => revealObserver.disconnect();
+  }, [route]);
+
+  useEffect(() => {
     if (route !== '/' || !pendingScrollId) return;
 
     const timer = window.setTimeout(() => {
@@ -96,6 +123,7 @@ const App: React.FC = () => {
 
   return (
     <div className="site-shell">
+      <div className="scroll-progress" aria-hidden="true" />
       <Sidebar activeSection={activeSection} onNavigate={scrollToSection} />
 
       <main className="site-main">
