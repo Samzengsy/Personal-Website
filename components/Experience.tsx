@@ -24,6 +24,27 @@ const LogoInline: React.FC<{ src: string; alt: string; href: string; heightClass
   </a>
 );
 
+const UcsbLogoLockup: React.FC = () => (
+  <a
+    href="https://www.math.ucsb.edu/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="logo-tile ucsb-logo-lockup h-20 w-64 md:h-28 md:w-64"
+    aria-label="UC Santa Barbara Department of Mathematics"
+  >
+    <span className="ucsb-seal-slot" aria-hidden="true">
+      <img src={`${ASSET_BASE}data/Logo/UCSB.gif`} alt="" />
+    </span>
+    <span className="ucsb-wordmark-slot">
+      <img
+        src={`${ASSET_BASE}data/Logo/primary-wordmark.gif`}
+        alt="UC Santa Barbara"
+        className="ucsb-wordmark-image"
+      />
+    </span>
+  </a>
+);
+
 export const Experience: React.FC = () => {
   return (
     <>
@@ -66,12 +87,7 @@ export const Experience: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-[auto,1fr,auto] gap-4 items-start">
               <div className="flex flex-wrap gap-2">
-                <Logo
-                  src={`${ASSET_BASE}data/Logo/UCSB.png`}
-                  alt="UCSB crest"
-                  href="https://www.math.ucsb.edu/"
-                  sizeClassName="h-20 w-20 md:h-28 md:w-28"
-                />
+                <UcsbLogoLockup />
               </div>
               <div>
                 <div className="experience-name">University of California, Santa Barbara</div>
@@ -95,7 +111,7 @@ export const Experience: React.FC = () => {
               </div>
               <div>
                 <div className="experience-name">The University of Hong Kong</div>
-                <div className="experience-role">MSc in Robotics and Intelligent Systems (RIS)</div>
+                <div className="experience-role">MSc in Robotics and Intelligent Systems</div>
               </div>
               <div className="experience-date md:text-right">Sep 2026 – Nov 2027</div>
             </div>
