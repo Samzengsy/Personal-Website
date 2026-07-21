@@ -12,7 +12,7 @@ import {
   Wrench,
   Box
 } from 'lucide-react';
-import { SocialLink, NavItem, ProjectGroup } from './types';
+import { SocialLink, NavItem, ProjectGroup, LifestylePageData, LifestyleSlug } from './types';
 
 const getRuntimeBase = () => {
   const base = import.meta.env.BASE_URL || '/';
@@ -162,7 +162,17 @@ export const PROJECT_GROUPS: ProjectGroup[] = [
   }
 ];
 
-export const LIFESTYLE_PAGES = {
+export const LIFESTYLE_SLUGS: LifestyleSlug[] = [
+  'photography',
+  'travel',
+  'music',
+  'wine-tasting'
+];
+
+export const isLifestyleSlug = (value: string): value is LifestyleSlug =>
+  LIFESTYLE_SLUGS.some((slug) => slug === value);
+
+export const LIFESTYLE_PAGES: Record<LifestyleSlug, LifestylePageData> = {
   photography: {
     title: 'Photography',
     subtitle: 'Studies in light, landscape, and atmosphere.',
@@ -175,6 +185,8 @@ export const LIFESTYLE_PAGES = {
         id: '1',
         src: `${ASSET_BASE}data/Photography/joshua-tree.jpg`,
         alt: 'Joshua Tree',
+        width: 4160,
+        height: 6240,
         location: 'Joshua Tree',
         year: 'Undated',
         note: 'From existing photography archive.'
@@ -183,6 +195,8 @@ export const LIFESTYLE_PAGES = {
         id: '2',
         src: `${ASSET_BASE}data/Photography/yosemite.jpg`,
         alt: 'Yosemite',
+        width: 6264,
+        height: 4180,
         location: 'Yosemite',
         year: 'Undated',
         note: 'From existing photography archive.'
@@ -191,6 +205,8 @@ export const LIFESTYLE_PAGES = {
         id: '3',
         src: `${ASSET_BASE}data/Photography/meteor.jpg`,
         alt: 'Meteor',
+        width: 2553,
+        height: 1702,
         location: 'Meteor',
         year: 'Undated',
         note: 'From existing photography archive.'
@@ -199,6 +215,8 @@ export const LIFESTYLE_PAGES = {
         id: '4',
         src: `${ASSET_BASE}data/Photography/los-angeles.jpg`,
         alt: 'Los Angeles',
+        width: 6240,
+        height: 4160,
         location: 'Los Angeles',
         year: 'Undated',
         note: 'From existing photography archive.'
@@ -217,6 +235,8 @@ export const LIFESTYLE_PAGES = {
         id: 'travel-1',
         src: `${ASSET_BASE}data/Travel/Chicago.jpg`,
         alt: 'Chicago',
+        width: 6240,
+        height: 4160,
         location: 'Chicago',
         year: 'Undated',
         note: 'From travel archive.'
@@ -225,6 +245,8 @@ export const LIFESTYLE_PAGES = {
         id: 'travel-2',
         src: `${ASSET_BASE}data/Travel/Toronto.jpg`,
         alt: 'Toronto',
+        width: 3000,
+        height: 2250,
         location: 'Toronto',
         year: 'Undated',
         note: 'From travel archive.'
@@ -233,6 +255,8 @@ export const LIFESTYLE_PAGES = {
         id: 'travel-3',
         src: `${ASSET_BASE}data/Travel/Mexico%20City.jpg`,
         alt: 'Mexico City',
+        width: 4032,
+        height: 3024,
         location: 'Mexico City',
         year: 'Undated',
         note: 'From travel archive.'
@@ -251,6 +275,8 @@ export const LIFESTYLE_PAGES = {
         id: 'music-1',
         src: `${ASSET_BASE}data/Music/Choir.jpg`,
         alt: 'Choir',
+        width: 4032,
+        height: 3024,
         location: 'Choir',
         year: 'Undated',
         note: 'From music archive.'
@@ -259,6 +285,8 @@ export const LIFESTYLE_PAGES = {
         id: 'music-2',
         src: `${ASSET_BASE}data/Music/Choir%20Tenor.jpg`,
         alt: 'Choir Tenor',
+        width: 4032,
+        height: 3024,
         location: 'Tenor Section',
         year: 'Undated',
         note: 'From music archive.'
@@ -277,6 +305,8 @@ export const LIFESTYLE_PAGES = {
         id: 'wine-1',
         src: `${ASSET_BASE}data/Wine%20Tasting/Wine%20Class%20at%20UCSB.jpg`,
         alt: 'Wine Class at UCSB',
+        width: 1170,
+        height: 1912,
         location: 'Santa Barbara',
         year: 'Undated',
         note: 'From wine tasting archive.'
@@ -285,6 +315,8 @@ export const LIFESTYLE_PAGES = {
         id: 'wine-2',
         src: `${ASSET_BASE}data/Wine%20Tasting/wine%20tasting%20at%20Santa%20Barbara.jpg`,
         alt: 'Wine Tasting at Santa Barbara',
+        width: 4032,
+        height: 3024,
         location: 'Santa Barbara',
         year: 'Undated',
         note: 'From wine tasting archive.'

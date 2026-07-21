@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowLeft } from 'lucide-react';
-import { LIFESTYLE_PAGES } from '../constants';
+import { isLifestyleSlug, LIFESTYLE_PAGES } from '../constants';
 
 interface LifestylePageProps {
   slug: string;
@@ -8,7 +8,7 @@ interface LifestylePageProps {
 }
 
 export const LifestylePage: React.FC<LifestylePageProps> = ({ slug, onBack }) => {
-  const page = (LIFESTYLE_PAGES as Record<string, { title: string; subtitle?: string; intro?: string[]; items: { id: string; src?: string; alt?: string; location?: string; year?: string; note?: string }[] }>)[slug];
+  const page = isLifestyleSlug(slug) ? LIFESTYLE_PAGES[slug] : undefined;
   const [brokenImages, setBrokenImages] = useState<Record<string, boolean>>({});
 
   const renderBackButton = () => (
@@ -74,6 +74,8 @@ export const LifestylePage: React.FC<LifestylePageProps> = ({ slug, onBack }) =>
                       <img
                         src={item.src}
                         alt={item.alt || page.title}
+                        width={item.width}
+                        height={item.height}
                         className="h-full w-full object-cover"
                         onError={() => setBrokenImages((prev) => ({ ...prev, [item.id]: true }))}
                       />

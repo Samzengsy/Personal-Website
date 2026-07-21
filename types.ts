@@ -29,3 +29,23 @@ export interface ProjectGroup {
   label: string;
   items: ProjectItem[];
 }
+
+export type LifestyleSlug = 'photography' | 'travel' | 'music' | 'wine-tasting';
+
+export interface LifestyleGalleryItem {
+  id: string;
+  src?: string;
+  alt?: string;
+  width?: number;
+  height?: number;
+  location?: string;
+  year?: string;
+  note?: string;
+}
+
+export interface LifestylePageData {
+  title: string;
+  subtitle?: string;
+  intro?: string[];
+  items: LifestyleGalleryItem[];
+}
