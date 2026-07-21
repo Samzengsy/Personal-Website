@@ -2,14 +2,14 @@ import React from 'react';
 import { ASSET_BASE } from '../constants';
 import { Database, Gauge, Globe2, Target, Trophy } from 'lucide-react';
 
-const Logo: React.FC<{ src: string; alt: string; href: string; sizeClassName?: string }> = ({ src, alt, href, sizeClassName }) => (
+const Logo: React.FC<{ src: string; alt: string; href: string; sizeClassName?: string; imageClassName?: string }> = ({ src, alt, href, sizeClassName, imageClassName }) => (
   <a
     href={href}
     target="_blank"
     rel="noopener noreferrer"
     className={`logo-tile ${sizeClassName || 'h-14 w-14 md:h-16 md:w-16'}`}
   >
-    <img src={src} alt={alt} className="max-h-full max-w-full object-contain" />
+    <img src={src} alt={alt} className={`max-h-full max-w-full object-contain ${imageClassName || ''}`} />
   </a>
 );
 
@@ -81,6 +81,23 @@ export const Experience: React.FC = () => {
                 </div>
               </div>
               <div className="experience-date md:text-right">Sep 2021 – Mar 2025</div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-[auto,1fr,auto] gap-4 items-start">
+              <div className="flex flex-wrap gap-2">
+                <Logo
+                  src={`${ASSET_BASE}data/Logo/HKU.png`}
+                  alt="The University of Hong Kong logo"
+                  href="https://www.hku.hk/"
+                  sizeClassName="h-20 w-64 md:h-28 md:w-64"
+                  imageClassName="hku-logo-image"
+                />
+              </div>
+              <div>
+                <div className="experience-name">The University of Hong Kong</div>
+                <div className="experience-role">MSc in Robotics and Intelligent Systems (RIS)</div>
+              </div>
+              <div className="experience-date md:text-right">Sep 2026 – Nov 2027</div>
             </div>
           </div>
         </div>

@@ -825,12 +825,17 @@ button:focus-visible {
   flex: none;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   border: 1px solid var(--color-rule);
   border-radius: var(--radius-md);
   background: var(--color-paper);
   box-shadow: var(--shadow-soft);
   padding: var(--space-2);
   transition: border-color var(--dur-short) var(--ease-out), transform var(--dur-short) var(--ease-out), box-shadow var(--dur-short) var(--ease-out);
+}
+
+.hku-logo-image {
+  transform: scale(2.3);
 }
 
 .logo-inline {
@@ -1322,6 +1327,7 @@ button:focus-visible {
   .desktop-nav {
     display: block;
     width: 100%;
+    margin-top: calc(var(--space-3) * -1);
     padding: 0 var(--space-6) var(--space-6);
   }
 
