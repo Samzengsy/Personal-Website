@@ -851,8 +851,10 @@ button:focus-visible {
 }
 
 .ucsb-logo-image {
-  transform: scale(1.4);
-  transform-origin: left center;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: none;
 }
 
 .logo-inline {
