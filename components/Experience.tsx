@@ -38,7 +38,7 @@ export const Experience: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-[auto,1fr,auto] gap-4 items-start">
               <div className="flex flex-wrap gap-2">
                 <Logo
-                  src={`${ASSET_BASE}data/Logo/UCSB.png`}
+                  src={`${ASSET_BASE}data/Logo/UCSB.png?v=20260721`}
                   alt="UC Santa Barbara logo"
                   href="https://www.math.ucsb.edu/"
                   sizeClassName="academic-brand-tile"
