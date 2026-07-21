@@ -24,27 +24,6 @@ const LogoInline: React.FC<{ src: string; alt: string; href: string; heightClass
   </a>
 );
 
-const UcsbLogoLockup: React.FC = () => (
-  <a
-    href="https://www.math.ucsb.edu/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="logo-tile ucsb-logo-lockup h-20 w-64 md:h-28 md:w-64"
-    aria-label="UC Santa Barbara Department of Mathematics"
-  >
-    <span className="ucsb-seal-slot" aria-hidden="true">
-      <img src={`${ASSET_BASE}data/Logo/UCSB.gif`} alt="" />
-    </span>
-    <span className="ucsb-wordmark-slot">
-      <img
-        src={`${ASSET_BASE}data/Logo/primary-wordmark.gif`}
-        alt="UC Santa Barbara"
-        className="ucsb-wordmark-image"
-      />
-    </span>
-  </a>
-);
-
 export const Experience: React.FC = () => {
   return (
     <>
@@ -56,38 +35,15 @@ export const Experience: React.FC = () => {
           </div>
 
           <div className="space-y-5">
-            <div className="grid grid-cols-1 md:grid-cols-[1fr,auto] gap-4 items-start">
-              <div className="flex flex-col md:flex-row md:items-center gap-4">
-                <div className="academic-logo-group flex items-center gap-3">
-                  <Logo
-                    src={`${ASSET_BASE}data/Logo/NFLSXL.png`}
-                    alt="Nanjing Foreign Language School Xianlin Campus crest"
-                    href="https://www.nflsxl.com/51/list.htm"
-                    sizeClassName="h-20 w-40 md:h-28 md:w-64"
-                  />
-                  <div className="experience-name">
-                    Nanjing Xianlin Foreign Language School
-                  </div>
-                </div>
-                <div className="experience-joiner md:px-2">×</div>
-                <div className="academic-logo-group flex items-center gap-3">
-                  <Logo
-                    src={`${ASSET_BASE}data/Logo/Wasatch-Academy.webp`}
-                    alt="Wasatch Academy crest"
-                    href="https://www.nflsxl.com/51/list.htm"
-                    sizeClassName="h-20 w-20 md:h-28 md:w-28"
-                  />
-                  <div className="experience-name">
-                    Wasatch Academy Program
-                  </div>
-                </div>
-              </div>
-              <div className="experience-date md:text-right">Sep 2018 – Jun 2021</div>
-            </div>
-
             <div className="grid grid-cols-1 md:grid-cols-[auto,1fr,auto] gap-4 items-start">
               <div className="flex flex-wrap gap-2">
-                <UcsbLogoLockup />
+                <Logo
+                  src={`${ASSET_BASE}data/Logo/UCSB.png`}
+                  alt="UC Santa Barbara logo"
+                  href="https://www.math.ucsb.edu/"
+                  sizeClassName="academic-brand-tile"
+                  imageClassName="ucsb-logo-image"
+                />
               </div>
               <div>
                 <div className="experience-name">University of California, Santa Barbara</div>
@@ -105,7 +61,7 @@ export const Experience: React.FC = () => {
                   src={`${ASSET_BASE}data/Logo/HKU.png`}
                   alt="The University of Hong Kong logo"
                   href="https://www.hku.hk/"
-                  sizeClassName="h-20 w-64 md:h-28 md:w-64"
+                  sizeClassName="academic-brand-tile"
                   imageClassName="hku-logo-image"
                 />
               </div>
